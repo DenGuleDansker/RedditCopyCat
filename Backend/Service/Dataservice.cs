@@ -17,32 +17,36 @@ public class DataService
     /// Seeder noget nyt data i databasen hvis det er nødvendigt.
     /// </summary>
 
-    //public List<Book> GetBooks()
-    //{
-    //    return db.Books.Include(b => b.Author).ToList();
-    //}
+    // Boards
+    public List<Topic> GetTopics()
+    {
+        return db.Topics.Include(t => t.Comment).ToList();
+    }
+    public Topic GetTopic(int id)
+    {
+        return db.Topics.Include(t => t.Comment).FirstOrDefault(b => b.TopicID == id)!;
+    }
 
-    //public Book GetBook(int id)
-    //{
-    //    return db.Books.Include(b => b.Author).FirstOrDefault(b => b.BookId == id);
-    //}
+    public String CreateTopic()
+    {
+        Topic topic = new Topic();
+        db.Topics.Add(topic);
+        db.SaveChanges();
+        return "Topic created, id: " + topic.TopicID;
+    }
 
-    //public List<Author> GetAuthors()
+    //// Comments
+    //public List<Comment> GetComments(int topicId)
     //{
-    //    return db.Authors.ToList();
+    //    return db.Topics.Include(t => t.Comment).FirstOrDefault(b => b.TopicID == topicId)!.Comment.ToList();
     //}
-
-    //public Author GetAuthor(int id)
+    //public string CreateComment(int topicID, string description, string user, DateTime date, int votes)
     //{
-    //    return db.Authors.Include(a => a.Books).FirstOrDefault(a => a.AuthorId == id);
-    //}
-
-    //public string CreateBook(string title, int authorId)
-    //{
-    //    Author author = db.Authors.FirstOrDefault(a => a.AuthorId == authorId);
-    //    db.Books.Add(new Book { Title = title, Author = author });
+    //    Topic topic = db.Topics.FirstOrDefault(b => b.TopicID == topicID);
+    //    Comment comment = new Comment(description, user, date, votes);
+    //    topic.Comment.Add(comment);
     //    db.SaveChanges();
-    //    return "Book created";
+    //    return "Comment created, id: " + comment.CommentID;
     //}
 
 }

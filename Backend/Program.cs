@@ -77,12 +77,10 @@ app.MapPost("/api/topics", (DataService service) =>
     return service.CreateTopic();
 });
 
-//COMMENTS
-app.MapGet("/api/topics/{id}/comments", (DataService service, int id) =>
-{
-    return service.GetComments(id);
-});
+////COMMENTS
+//app.MapGet("/api/topics/{id}/comments", (DataService service, int id) =>
+//{
+//    return service.GetComments(id);
+//});
 
 app.Run();
-
-record NewBookData(string Titel, int AuthorId);
