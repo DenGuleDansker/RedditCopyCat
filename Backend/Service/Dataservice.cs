@@ -16,8 +16,23 @@ public class DataService
     /// <summary>
     /// Seeder noget nyt data i databasen hvis det er nødvendigt.
     /// </summary>
+    public void SeedData()
+    {
 
-    // Boards
+        Topic topic = db.Topics.FirstOrDefault()!;
+        if (topic == null)
+        {
+            topic = new Topic { Title = "Hej" };
+            db.Topics.Add(topic);
+  
+        }
+
+   
+        db.SaveChanges();
+    }
+
+
+    // Topics
     public List<Topic> GetTopics()
     {
         return db.Topics.Include(t => t.Comment).ToList();

@@ -21,6 +21,7 @@ namespace Model
         public string User { get; set; }
         public DateTime Date { get; set; }
         public int Votes { get; set; }
+        public Topic topic { get; set; }
     }
 }
 
