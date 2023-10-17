@@ -18,10 +18,10 @@ namespace Model
         }
 
         public long TopicID { get; set; }
-        public string? Title { get; set; }
-        public string? Description { get; set; }
-        public string? User { get; set; }
-        public DateTime? Date { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string User { get; set; }
+        public DateTime Date { get; set; }
         public int? Votes { get; set; }
 
         public List<Comment> Comment { get; set; }
