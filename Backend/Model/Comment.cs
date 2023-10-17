@@ -17,7 +17,6 @@ namespace Model
         }
 
         public long CommentID { get; set; }
-        public Topic? Topic { get; set; }
         public string Description { get; set; }
         public string User { get; set; }
         public DateTime Date { get; set; }
