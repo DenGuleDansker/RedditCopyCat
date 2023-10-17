@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Net.Http.Json;
 using System.Text.Json;
-
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Model;
 
 namespace Service;
@@ -16,20 +17,20 @@ public class DataService
     /// <summary>
     /// Seeder noget nyt data i databasen hvis det er nødvendigt.
     /// </summary>
-    public void SeedData()
-    {
+    //public void SeedData()
+    //{
 
-        Topic topic = db.Topics.FirstOrDefault()!;
-        if (topic == null)
-        {
-            topic = new Topic { Title = "Hej" };
-            db.Topics.Add(topic);
+    //    Topic topic = db.Topics.FirstOrDefault()!;
+    //    if (topic == null)
+    //    {
+    //        topic = new Topic { Title = "Hej" };
+    //        db.Topics.Add(topic);
   
-        }
+    //    }
 
    
-        db.SaveChanges();
-    }
+    //    db.SaveChanges();
+    //}
 
 
     // Topics
@@ -42,9 +43,18 @@ public class DataService
         return db.Topics.Include(t => t.Comment).FirstOrDefault(b => b.TopicID == id)!;
     }
 
-    public String CreateTopic()
+    public string CreateTopic(Topic topicdata)
     {
-        Topic topic = new Topic();
+
+        Topic topic = new Topic 
+        {
+        Title = topicdata.Title,
+        Description = topicdata.Description,
+        User = topicdata.User,
+        Date = topicdata.Date,
+        Votes = topicdata.Votes
+        };
+
         db.Topics.Add(topic);
         db.SaveChanges();
         return "Topic created, id: " + topic.TopicID;

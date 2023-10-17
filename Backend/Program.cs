@@ -72,9 +72,9 @@ app.MapGet("/api/topics/{id}", (DataService service, int id) =>
     return service.GetTopic(id);
 });
 
-app.MapPost("/api/topics", (DataService service) =>
+app.MapPost("/api/topics", (DataService service, Topic topicdata) =>
 {
-    return service.CreateTopic();
+    return service.CreateTopic(topicdata);
 });
 
 //COMMENTS
