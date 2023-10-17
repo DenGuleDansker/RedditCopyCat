@@ -78,9 +78,9 @@ app.MapPost("/api/topics", (DataService service) =>
 });
 
 //COMMENTS
-app.MapGet("/api/topics/{id}/comments", (DataService service, int TopicId) =>
+app.MapGet("/api/topics/{topicid}/comments", (DataService service, int topicid) =>
 {
-    return service.GetComment(TopicId);
+    return service.GetComment(topicid);
 });
 
 app.MapGet("/api/topics/{topicid}/comments/{commentid}", (DataService service, int topicid, int commentid) =>
