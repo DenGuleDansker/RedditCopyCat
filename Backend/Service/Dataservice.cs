@@ -35,18 +35,26 @@ public class DataService
         return "Topic created, id: " + topic.TopicID;
     }
 
-    //// Comments
-    //public List<Comment> GetComments(int topicId)
-    //{
-    //    return db.Topics.Include(t => t.Comment).FirstOrDefault(b => b.TopicID == topicId)!.Comment.ToList();
-    //}
-    //public string CreateComment(int topicID, string description, string user, DateTime date, int votes)
-    //{
-    //    Topic topic = db.Topics.FirstOrDefault(b => b.TopicID == topicID);
-    //    Comment comment = new Comment(description, user, date, votes);
-    //    topic.Comment.Add(comment);
-    //    db.SaveChanges();
-    //    return "Comment created, id: " + comment.CommentID;
-    //}
+    // Comments
+    public List<Comment> GetComment(int topicId)
+    {
+        return db.Topics.Include(t => t.Comment).FirstOrDefault(b => b.TopicID == topicId)!.Comment.ToList();
+    }
+
+    public List<Comment> GetComments(int topicId, int commentId)
+    {
+        return db.Topics.Include(t => t.Comment).FirstOrDefault(b => b.TopicID == topicId)!.Comment.ToList();
+    }
+
+
+    public string CreateComment(int topicID, string description, string user, DateTime date, int votes)
+    {
+        Topic topic = db.Topics.FirstOrDefault(b => b.TopicID == topicID);
+        Comment comment = new Comment(description, user, date, votes);
+        topic.Comment.Add(comment);
+        db.SaveChanges();
+        return "Comment created, id: " + comment.CommentID;
+    }
+
 
 }
