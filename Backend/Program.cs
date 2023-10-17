@@ -1,11 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http.Json;
-
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Configuration;
-using Service;
 using Model;
+using Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,32 +16,31 @@ builder.Services.AddCors(options =>
     });
 });
 
-//Tilføj DbContext factory som service.
+// Tilføj DbContext factory som service.
 builder.Services.AddDbContext<TopicContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("ContextSQLite")));
 
 // Tilføj DataService så den kan bruges i endpoints
-builder.Services.AddScoped<TopicContext>();
+builder.Services.AddScoped<DataService>();
 
 // Dette kode kan bruges til at fjerne "cykler" i JSON objekterne.
-
+/*
 builder.Services.Configure<JsonOptions>(options =>
 {
-    //Her kan man fjerne fejl der opstår, når man returnerer JSON med objekter,
-    //der refererer til hinanden i en cykel.
-    //     (altså dobbelrettede associeringer)
-    options.SerializerOptions.ReferenceHandler =
+    // Her kan man fjerne fejl der opstår, når man returnerer JSON med objekter,
+    // der refererer til hinanden i en cykel.
+    // (altså dobbelrettede associeringer)
+    options.SerializerOptions.ReferenceHandler = 
         System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
 });
-
-
+*/
 
 var app = builder.Build();
 
-//// Seed data hvis nødvendigt.
+// Seed data hvis nødvendigt.
 //using (var scope = app.Services.CreateScope())
 //{
-//    var dataService = scope.ServiceProvider.GetRequiredService<TopicContext>();
+//    var dataService = scope.ServiceProvider.GetRequiredService<DataService>();
 //    dataService.SeedData(); // Fylder data på, hvis databasen er tom. Ellers ikke.
 //}
 
@@ -58,49 +53,42 @@ app.Use(async (context, next) =>
     context.Response.ContentType = "application/json; charset=utf-8";
     await next(context);
 });
-// HERUNDER ER TILFØJET AF MAGNI
 
-//DataService fås via "Dependency Injection" (DI)
+
+// DataService fås via "Dependency Injection" (DI)
 app.MapGet("/", (DataService service) =>
 {
     return new { message = "Hello World!" };
 });
 
-//TOPICS
-app.MapGet("/api/topics", (DataService service) =>
-{
-    return service.GetTopics();
-});
-
-app.MapGet("/api/topics/{id}", (DataService service, int id) =>
-{
-    return service.GetTopic(id);
-});
-
-app.MapPost("/api/topics", (DataService service) =>
-{
-    return service.CreateTopic();
-});
-
-//COMMENTS
-app.MapGet("/api/topics/{id}/comments", (DataService service, int id) =>
-{
-    return service.GetComments(id);
-});
-
-//app.MapGet("/api/topics/{topicid}/comments/{commentid}", (DataService service, int topicid, int commentid) =>
+//app.MapGet("/api/books", (DataService service) =>
 //{
-//    return service.GetComments(topicid, commentid);
+//    return service.GetBooks().Select(b => new {
+//        bookId = b.BookId,
+//        title = b.Title,
+//        author = new
+//        {
+//            b.Author.AuthorId,
+//            b.Author.Fullname
+//        }
+//    });
 //});
 
-//app.MapPost("/api/topics/{topicid}/comments", (DataService service, NewCommentData description, int topicid) =>
+//app.MapGet("/api/authors", (DataService service) =>
 //{
-//    string result = service.CreateComment(description, topicid);
+//    return service.GetAuthors().Select(a => new { a.AuthorId, a.Fullname });
+//});
+
+//app.MapGet("/api/authors/{id}", (DataService service, int id) => {
+//    return service.GetAuthor(id);
+//});
+
+//app.MapPost("/api/books", (DataService service, NewBookData data) =>
+//{
+//    string result = service.CreateBook(data.Titel, data.AuthorId);
 //    return new { message = result };
 //});
 
-
-
 app.Run();
 
-record NewCommentData(string description);
+record NewBookData(string Titel, int AuthorId);
