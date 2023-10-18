@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{72AE4BE2-0017-4A97-BB02-B5E64B821E73}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Backend PreferredExecutionTarget="/Applications/Opera.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Service/Dataservice.cs">
+    <Files>
+      <File FileName="appsettings.json" Line="11" Column="37" />
+      <File FileName="appsettings.Development.json" Line="11" Column="4" />
+      <File FileName="Model/Comment.cs" Line="22" Column="29" />
+      <File FileName="Model/Topic.cs" Line="23" Column="27" />
+      <File FileName="Model/TopicContext.cs" Line="19" Column="49" />
+      <File FileName="Service/Dataservice.cs" Line="55" Column="32" />
+      <File FileName="Program.cs" Line="77" Column="25" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Backend">
+            <Node name="Backend">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Model" expanded="True" />
+              <Node name="Service" expanded="True">
+                <Node name="Dataservice.cs" selected="True" />
+              </Node>
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+</Properties>

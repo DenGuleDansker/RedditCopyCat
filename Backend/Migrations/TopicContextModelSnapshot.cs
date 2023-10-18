@@ -57,6 +57,7 @@ namespace Backend.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Title")
@@ -67,7 +68,7 @@ namespace Backend.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Votes")
+                    b.Property<int?>("Votes")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("TopicID");

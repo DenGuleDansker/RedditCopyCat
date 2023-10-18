@@ -67,18 +67,18 @@ app.MapGet("/api/topics", (DataService service) =>
     return service.GetTopics();
 });
 
-app.MapGet("/api/topics/{id}", (DataService service, int id) =>
+app.MapGet("/api/topic/{id}", (DataService service, int id) =>
 {
     return service.GetTopic(id);
 });
 
-app.MapPost("/api/topics", (DataService service) =>
+app.MapPost("/api/topics", (DataService service, Topic topicdata) =>
 {
-    return service.CreateTopic();
+    return service.CreateTopic(topicdata);
 });
 
 //COMMENTS
-app.MapGet("/api/topics/{topicid}/comments", (DataService service, int topicid) =>
+app.MapGet("/api/{topicid}/comments", (DataService service, int topicid) =>
 {
     return service.GetComment(topicid);
 });
@@ -88,13 +88,14 @@ app.MapGet("/api/topics/{topicid}/comments/{commentid}", (DataService service, i
     return service.GetComments(topicid, commentid);
 });
 
-app.MapPost("/api/topics/{topicid}/comments", (DataService service, NewCommentData data) =>
+app.MapPost("/api/comment", (DataService service, NewCommentData data) =>
 {
-    string result = service.CreateComment(data.topicid, data.description, data.user, data.Date, data.votes);
-    return new { message = result };
+    return service.CreateComment(data.description, data.user, data.topicid);
 });
+
 
 
 app.Run();
 
-record NewCommentData(int topicid, string description, string user, DateTime Date, int votes);
+//record NewCommentData(Comment commentdata, int topicid);
+record NewCommentData(string description, string user, int topicid);

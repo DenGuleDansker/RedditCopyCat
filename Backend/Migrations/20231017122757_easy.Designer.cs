@@ -11,8 +11,8 @@ using Model;
 namespace Backend.Migrations
 {
     [DbContext(typeof(TopicContext))]
-    [Migration("20231017101834_nummer2")]
-    partial class nummer2
+    [Migration("20231017122757_easy")]
+    partial class easy
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -60,6 +60,7 @@ namespace Backend.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Title")
@@ -70,7 +71,7 @@ namespace Backend.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Votes")
+                    b.Property<int?>("Votes")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("TopicID");

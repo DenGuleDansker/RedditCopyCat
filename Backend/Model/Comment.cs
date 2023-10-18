@@ -8,12 +8,12 @@ namespace Model
 
         }
 
-        public Comment(string description, string user, DateTime date, int votes)
+        public Comment(string description, string user)
         {
             this.Description = description;
             this.User = user;
-            this.Date = date;
-            this.Votes = votes;
+            this.Date = DateTime.Now;
+            this.Votes = 0;
         }
 
         public long CommentID { get; set; }
@@ -21,7 +21,7 @@ namespace Model
         public string User { get; set; }
         public DateTime Date { get; set; }
         public int Votes { get; set; }
-        public Topic topic { get; set; }
+        public Topic Topic { get; set; }
     }
 }
 
