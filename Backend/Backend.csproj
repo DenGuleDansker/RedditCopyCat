@@ -25,4 +25,8 @@
     <None Remove="Model\" />
     <None Remove="Service\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shared1\Shared.csproj" />
+  </ItemGroup>
 </Project>

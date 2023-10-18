@@ -680,6 +680,16 @@
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
+      },
+      "Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shared.dll": {}
+        }
       }
     }
   },
@@ -1763,6 +1773,11 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Shared/1.0.0": {
+      "type": "project",
+      "path": "../Shared1/Shared.csproj",
+      "msbuildProject": "../Shared1/Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1770,6 +1785,7 @@
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 6.0.2",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.12",
       "Microsoft.EntityFrameworkCore.SQLite >= 7.0.12",
+      "Shared >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -1805,7 +1821,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Bruger\\Desktop\\reddit\\RedditCopyCat\\Shared1\\Shared.csproj": {
+              "projectPath": "C:\\Users\\Bruger\\Desktop\\reddit\\RedditCopyCat\\Shared1\\Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
