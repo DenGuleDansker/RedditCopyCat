@@ -10,7 +10,7 @@ public class ApiService
 {
     private readonly HttpClient http;
     private readonly IConfiguration configuration;
-    private readonly string baseAPI = "https://localhost:7083/api/";
+    private readonly string baseAPI = "";
 
     public ApiService(HttpClient http, IConfiguration configuration)
     {
@@ -27,7 +27,7 @@ public class ApiService
 
     public async Task<Topic> GetTopic(int id)
     {
-        string url = $"{baseAPI}posts/{id}/";
+        string url = $"{baseAPI}topic/{id}";
         return await http.GetFromJsonAsync<Topic>(url);
     }
 

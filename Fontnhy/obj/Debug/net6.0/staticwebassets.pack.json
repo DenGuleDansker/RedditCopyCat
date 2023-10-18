@@ -9,8 +9,16 @@
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "C:\\Users\\Bruger\\Desktop\\reddit\\RedditCopyCat\\Fontnhy\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Fontnhy.styles.css",
-      "PackagePath": "staticwebassets\\Fontnhy.styles.css"
+      "Id": "C:\\Users\\Bruger\\Desktop\\reddit\\RedditCopyCat\\Fontnhy\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Frontend.styles.css",
+      "PackagePath": "staticwebassets\\Frontend.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\Bruger\\Desktop\\reddit\\RedditCopyCat\\Fontnhy\\wwwroot\\appsettings.Development.json",
+      "PackagePath": "staticwebassets\\appsettings.Development.json"
+    },
+    {
+      "Id": "C:\\Users\\Bruger\\Desktop\\reddit\\RedditCopyCat\\Fontnhy\\wwwroot\\appsettings.json",
+      "PackagePath": "staticwebassets\\appsettings.json"
     },
     {
       "Id": "C:\\Users\\Bruger\\Desktop\\reddit\\RedditCopyCat\\Fontnhy\\wwwroot\\css\\app.css",
@@ -77,20 +85,20 @@
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Fontnhy.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Frontend.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Fontnhy.props",
-      "PackagePath": "build\\Fontnhy.props"
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Frontend.props",
+      "PackagePath": "build\\Frontend.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Fontnhy.props",
-      "PackagePath": "buildMultiTargeting\\Fontnhy.props"
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Frontend.props",
+      "PackagePath": "buildMultiTargeting\\Frontend.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Fontnhy.props",
-      "PackagePath": "buildTransitive\\Fontnhy.props"
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Frontend.props",
+      "PackagePath": "buildTransitive\\Frontend.props"
     }
   ],
   "ElementsToRemove": []

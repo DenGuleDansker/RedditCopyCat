@@ -1,8 +1,11 @@
 {
   "cacheBootResources": true,
-  "config": [ ],
+  "config": [
+    "appsettings.Development.json",
+    "appsettings.json"
+  ],
   "debugBuild": true,
-  "entryAssembly": "Fontnhy",
+  "entryAssembly": "Frontend",
   "icuDataMode": 0,
   "linkerEnabled": false,
   "resources": {
@@ -201,14 +204,14 @@
       "netstandard.dll": "sha256-eWmNGfejUeBAxr01xTdL9vgARF2KwlV2JPpYdaokts8=",
       "System.Private.CoreLib.dll": "sha256-5w4iRqv9MYyA0CG9D1wGOudtAmfU8mI10S6SKDD\/scI=",
       "Shared.dll": "sha256-+Vqop9YTBxGikZHNTyeqd2IZv4sxRB435H3xJ5wVm2A=",
-      "Fontnhy.dll": "sha256-nwwvBpi\/2eB4UgudINPsCyPuEEzgLNgkoAjhxEAkhgU="
+      "Frontend.dll": "sha256-7Emg7P8bjYtlJsPf\/\/PKn2phYxbAVevD1n4SdM6QmaQ="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "Shared.pdb": "sha256-XruIQyLAgrUF54RTWwgvxwn\/h7KrEZeT0ejjyO3jAr8=",
-      "Fontnhy.pdb": "sha256-DGuZ8U49yviYlv+s4abIUmEnQqGomRhvb5qQn4RmTJU="
+      "Frontend.pdb": "sha256-IAnx0eus1cjDpeK+dVEyrSD\/+yvKZnrXN4YBLCWDFNE="
     },
     "runtime": {
       "dotnet.6.0.22.tarpzix3in.js": "sha256-Vpgzm0BMIfPGXG2SCtEChw5HmXlQJIIS0eyBG8kP+u4=",

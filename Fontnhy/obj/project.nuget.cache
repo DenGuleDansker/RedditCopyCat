@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7wGLfSvEYqRsx0lCqYy6N3TLZkoCAHI4vmfp4I7J20Sti1FwU8it5WLmFjmTQtleKD6/Ou3GFVWrSTHjW+IkUA==",
+  "dgSpecHash": "qU+dYcoq+ywdXE7r8Bl99iRoGSr9dJq76LtSMiPfDfpfeJb8yMQuDTzs0t132QhFJ5M1rOlZ+l0KXtum4vGkNw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bruger\\Desktop\\reddit\\RedditCopyCat\\Fontnhy\\Fontnhy.csproj",
+  "projectFilePath": "C:\\Users\\Bruger\\Desktop\\reddit\\RedditCopyCat\\Fontnhy\\Frontend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bruger\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.21\\microsoft.aspnetcore.authorization.6.0.21.nupkg.sha512",
     "C:\\Users\\Bruger\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.21\\microsoft.aspnetcore.components.6.0.21.nupkg.sha512",

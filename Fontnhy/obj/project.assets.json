@@ -2060,9 +2060,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bruger\\Desktop\\reddit\\RedditCopyCat\\Fontnhy\\Fontnhy.csproj",
-      "projectName": "Fontnhy",
-      "projectPath": "C:\\Users\\Bruger\\Desktop\\reddit\\RedditCopyCat\\Fontnhy\\Fontnhy.csproj",
+      "projectUniqueName": "C:\\Users\\Bruger\\Desktop\\reddit\\RedditCopyCat\\Fontnhy\\Frontend.csproj",
+      "projectName": "Frontend",
+      "projectPath": "C:\\Users\\Bruger\\Desktop\\reddit\\RedditCopyCat\\Fontnhy\\Frontend.csproj",
       "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Bruger\\Desktop\\reddit\\RedditCopyCat\\Fontnhy\\obj\\",
       "projectStyle": "PackageReference",
