@@ -1,38 +1,50 @@
-﻿<Properties StartupConfiguration="{72AE4BE2-0017-4A97-BB02-B5E64B821E73}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Backend PreferredExecutionTarget="/Applications/Opera.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Service/Dataservice.cs">
+﻿<Properties StartupConfiguration="Multiple Projects">
+  <MonoDevelop.Ide.ItemProperties.Frontend PreferredExecutionTarget="/Applications/Opera.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Frontend/Service/ApiService.cs">
     <Files>
-      <File FileName="appsettings.json" Line="11" Column="37" />
-      <File FileName="appsettings.Development.json" Line="11" Column="4" />
-      <File FileName="Model/Comment.cs" Line="22" Column="29" />
-      <File FileName="Model/Topic.cs" Line="23" Column="27" />
-      <File FileName="Model/TopicContext.cs" Line="19" Column="49" />
-      <File FileName="Service/Dataservice.cs" Line="55" Column="32" />
-      <File FileName="Program.cs" Line="77" Column="25" />
+      <File FileName="Service/Dataservice.cs" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="1" Column="1" />
+      <File FileName="../../../../../usr/local/share/dotnet/sdk/7.0.400/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" />
+      <File FileName="../Shared1/Model/Comment.cs" />
+      <File FileName="../Shared1/Model/Topic.cs" />
+      <File FileName="../Shared1/Model/TopicContext.cs" />
+      <File FileName="../Frontend/Service/ApiService.cs" Line="29" Column="6" />
+      <File FileName="../Frontend/Pages/Index.razor" Line="47" Column="35" />
+      <File FileName="appsettings.json" Line="1" Column="1" />
+      <File FileName="../Frontend/Client/Program.cs" Line="12" Column="40" />
+      <File FileName="../Frontend/Pages/Counter.razor" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Backend">
+          <Node name="Backend" expanded="True">
             <Node name="Backend">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
+              <Node name="Service" expanded="True" />
+            </Node>
+            <Node name="Frontend">
+              <Node name="Client" expanded="True" />
+              <Node name="Pages" expanded="True" />
+              <Node name="Service">
+                <Node name="ApiService.cs" selected="True" />
               </Node>
-              <Node name="Model" expanded="True" />
-              <Node name="Service" expanded="True">
-                <Node name="Dataservice.cs" selected="True" />
-              </Node>
-              <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
+      <Items>
+        <StartupItem ItemId="{72AE4BE2-0017-4A97-BB02-B5E64B821E73}" ItemName="Backend" ConfigurationId="Default" />
+        <StartupItem ItemId="{E65326F4-A0AE-44D5-A588-A833F0F51AED}" ItemName="Frontend" ConfigurationId="Default" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+  <MonoDevelop.Ide.ItemProperties.Backend PreferredExecutionTarget="/Applications/Opera.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
