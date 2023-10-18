@@ -30,7 +30,7 @@ else
                     These a href links will match the route in the page 'PostItem.razor'.
                     The route is defined as "/post/{id}" and the id is the post id.
                 -->
-                <td><a href="/topic/@topic.TopicID">@topic.Title</a></td>
+                <td><a href="/topic?id=@topic.TopicID">@topic.Title</a></td>
                 <td>@topic.Description</td>
                 <td>@topic.Votes</td>
                 <td>@topic.Date</td>

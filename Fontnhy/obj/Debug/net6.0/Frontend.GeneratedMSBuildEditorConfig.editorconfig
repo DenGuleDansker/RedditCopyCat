@@ -20,12 +20,12 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/chilinhm/Desktop/RedditCopyCat/Fontnhy/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
+[/Users/chilinhm/Desktop/RedditCopyCat/Fontnhy/Pages/CommentPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29tbWVudFBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/chilinhm/Desktop/RedditCopyCat/Fontnhy/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmV0Y2hEYXRhLnJhem9y
+[/Users/chilinhm/Desktop/RedditCopyCat/Fontnhy/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/chilinhm/Desktop/RedditCopyCat/Fontnhy/Shared/CreateComment.razor]
