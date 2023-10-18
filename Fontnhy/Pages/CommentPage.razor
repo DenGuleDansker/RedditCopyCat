@@ -1,9 +1,36 @@
 ﻿@page "/topic"
 @inject HttpClient Http
-@using backend.Data;
+@using backend.Data
+@using Model
 @inject ApiService apiService
-@inject NavigationManager NavigationManager
 
+@inject NavigationManager NavigationManager
+{
+<table>
+    <tr>
+        <th>Kommentar</th>
+        <th>Navn</th>
+        <th>Dato</th>
+    </tr>
+    @foreach (var comment in comments)
+    {
+        <tr>
+            <!--
+                These a href links will match the route in the page 'PostItem.razor'.
+                The route is defined as "/post/{id}" and the id is the post id.
+            -->
+            <td>@comment.Description</td>
+            <td>@comment.User</td>
+            <td>@comment.Date</td>
+            @*<td>@(post.Upvotes - post.Downvotes)</td>*@
+            @*<td><button @onclick="() => Upvote(post.Id)">Upvote</button></td>
+                <td><button @onclick="() => Downvote(post.Id)">Downvote</button></td>*@
+        </tr>
+    }
+</table>
+
+<br />
+}
 
 <div>
     <br />
@@ -14,15 +41,19 @@
 </div>
 
 @code {
-
-    // PostId is passed in from the parent component. See how in PostItem.razor.
     [Parameter]
     public int PostId { get; set; }
+    private Comment[]? comments;
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-
+        comments = await apiService.GetComments(PostId);
     }
+    // PostId is passed in from the parent component. See how in PostItem.razor.
+
+    //private Post? votePost;
+
+
 
     //private string? content;
     //private async void CreateNewComment()

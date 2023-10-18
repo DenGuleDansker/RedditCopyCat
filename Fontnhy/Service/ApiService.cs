@@ -31,6 +31,13 @@ public class ApiService
         return await http.GetFromJsonAsync<Topic>(url);
     }
 
+    public async Task<Comment[]> GetComments(int topicid)
+    {
+        string url = $"{baseAPI}{topicid}/comments";
+        return await http.GetFromJsonAsync<Comment[]>(url);
+    }
+
+
     public async Task<Comment> CreateComment(string content, int postId, int userId)
     {
         string url = $"{baseAPI}posts/{postId}/comments";
