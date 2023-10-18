@@ -68,7 +68,7 @@ namespace Backend.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("Votes")
+                    b.Property<int>("Votes")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("TopicID");
@@ -78,13 +78,13 @@ namespace Backend.Migrations
 
             modelBuilder.Entity("Model.Comment", b =>
                 {
-                    b.HasOne("Model.Topic", "topic")
+                    b.HasOne("Model.Topic", "Topic")
                         .WithMany("Comment")
                         .HasForeignKey("TopicID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("topic");
+                    b.Navigation("Topic");
                 });
 
             modelBuilder.Entity("Model.Topic", b =>

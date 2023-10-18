@@ -24,7 +24,7 @@ namespace Model
         public string Description { get; set; }
         public string User { get; set; }
         public DateTime Date { get; set; }
-        public int Votes = 0;
+        public int Votes { get; set; }
 
         public List<Comment> Comment { get; set; }
 

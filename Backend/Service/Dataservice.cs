@@ -72,14 +72,14 @@ public class DataService
     }
 
 
-    public string CreateComment(string description, string user, int topicid)
+    public string CreateComment(string description, string user, DateTime date, int votes, long topicid)
     //public Comment CreateComment(string description, string user)
     {
 
         //Comment newcomment = new Comment(description, user);
 
-        Topic topic = db.Topics.FirstOrDefault(a => a.TopicID == topicid);
-        db.Comment.Add(new Comment { Description = description, User = user, Topic = topic });
+        Topic topic1 = db.Topics.FirstOrDefault(a => a.TopicID == topicid);
+        db.Comment.Add(new Comment { Description = description, User = user, Date = date, Votes = votes, Topic = topic1 });
 
         try
         {

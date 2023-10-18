@@ -23,17 +23,17 @@ builder.Services.AddDbContext<TopicContext>(options =>
 // Tilføj DataService så den kan bruges i endpoints
 builder.Services.AddScoped<DataService>();
 
-// Dette kode kan bruges til at fjerne "cykler" i JSON objekterne.
-/*
+//Dette kode kan bruges til at fjerne "cykler" i JSON objekterne.
+
 builder.Services.Configure<JsonOptions>(options =>
 {
-    // Her kan man fjerne fejl der opstår, når man returnerer JSON med objekter,
-    // der refererer til hinanden i en cykel.
-    // (altså dobbelrettede associeringer)
-    options.SerializerOptions.ReferenceHandler = 
+     //Her kan man fjerne fejl der opstår, når man returnerer JSON med objekter,
+     //der refererer til hinanden i en cykel.
+     //(altså dobbelrettede associeringer)
+    options.SerializerOptions.ReferenceHandler =
         System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
 });
-*/
+
 
 var app = builder.Build();
 
@@ -90,7 +90,7 @@ app.MapGet("/api/topics/{topicid}/comments/{commentid}", (DataService service, i
 
 app.MapPost("/api/comment", (DataService service, NewCommentData data) =>
 {
-    return service.CreateComment(data.description, data.user, data.topicid);
+    return service.CreateComment(data.description, data.user, data.date, data.votes, data.topicid);
 });
 
 
@@ -98,4 +98,4 @@ app.MapPost("/api/comment", (DataService service, NewCommentData data) =>
 app.Run();
 
 //record NewCommentData(Comment commentdata, int topicid);
-record NewCommentData(string description, string user, int topicid);
+record NewCommentData(string description, string user, DateTime date, int votes, long topicid);

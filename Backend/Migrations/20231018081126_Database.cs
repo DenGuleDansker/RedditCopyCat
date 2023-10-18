@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Backend.Migrations
 {
     /// <inheritdoc />
-    public partial class easy : Migration
+    public partial class Database : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -21,7 +21,7 @@ namespace Backend.Migrations
                     Description = table.Column<string>(type: "TEXT", nullable: false),
                     User = table.Column<string>(type: "TEXT", nullable: false),
                     Date = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    Votes = table.Column<int>(type: "INTEGER", nullable: true)
+                    Votes = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {

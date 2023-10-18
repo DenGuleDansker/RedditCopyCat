@@ -11,8 +11,8 @@ using Model;
 namespace Backend.Migrations
 {
     [DbContext(typeof(TopicContext))]
-    [Migration("20231017122757_easy")]
-    partial class easy
+    [Migration("20231018081126_Database")]
+    partial class Database
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -71,7 +71,7 @@ namespace Backend.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("Votes")
+                    b.Property<int>("Votes")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("TopicID");
@@ -81,13 +81,13 @@ namespace Backend.Migrations
 
             modelBuilder.Entity("Model.Comment", b =>
                 {
-                    b.HasOne("Model.Topic", "topic")
+                    b.HasOne("Model.Topic", "Topic")
                         .WithMany("Comment")
                         .HasForeignKey("TopicID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("topic");
+                    b.Navigation("Topic");
                 });
 
             modelBuilder.Entity("Model.Topic", b =>
