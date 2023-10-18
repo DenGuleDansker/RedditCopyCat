@@ -1,0 +1,14 @@
+﻿table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid black; /* Set the border properties */
+}
+
+th, td {
+    border: 1px solid black; /* Set the border properties */
+    padding: 8px; /* Add some padding to your cells for better spacing */
+}
+
+th {
+    background-color: #f2f2f2; /* Optional background color for header cells */
+}
