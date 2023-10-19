@@ -9,45 +9,45 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = Frontend
 build_property.RootNamespace = Frontend
-build_property.ProjectDir = /Users/chilinhm/Desktop/RedditCopyCat/Fontnhy/
+build_property.ProjectDir = C:\Users\marcu\Desktop\RedditAPI\Fontnhy\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/chilinhm/Desktop/RedditCopyCat/Fontnhy
+build_property.MSBuildProjectDirectory = C:\Users\marcu\Desktop\RedditAPI\Fontnhy
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/chilinhm/Desktop/RedditCopyCat/Fontnhy/App.razor]
+[C:/Users/marcu/Desktop/RedditAPI/Fontnhy/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/chilinhm/Desktop/RedditCopyCat/Fontnhy/Pages/CommentPage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29tbWVudFBhZ2UucmF6b3I=
+[C:/Users/marcu/Desktop/RedditAPI/Fontnhy/Pages/CommentPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tbWVudFBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/chilinhm/Desktop/RedditCopyCat/Fontnhy/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ291bnRlci5yYXpvcg==
+[C:/Users/marcu/Desktop/RedditAPI/Fontnhy/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/chilinhm/Desktop/RedditCopyCat/Fontnhy/Shared/CreateComment.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL0NyZWF0ZUNvbW1lbnQucmF6b3I=
+[C:/Users/marcu/Desktop/RedditAPI/Fontnhy/Shared/CreateComment.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENyZWF0ZUNvbW1lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/chilinhm/Desktop/RedditCopyCat/Fontnhy/Shared/SurveyPrompt.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1N1cnZleVByb21wdC5yYXpvcg==
+[C:/Users/marcu/Desktop/RedditAPI/Fontnhy/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/chilinhm/Desktop/RedditCopyCat/Fontnhy/_Imports.razor]
+[C:/Users/marcu/Desktop/RedditAPI/Fontnhy/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/chilinhm/Desktop/RedditCopyCat/Fontnhy/Pages/Index.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-6tngkvcanx
+[C:/Users/marcu/Desktop/RedditAPI/Fontnhy/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-gif5wibab3
 
-[/Users/chilinhm/Desktop/RedditCopyCat/Fontnhy/Shared/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-g54fw4uzw3
+[C:/Users/marcu/Desktop/RedditAPI/Fontnhy/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-gknvvqa2uj
 
-[/Users/chilinhm/Desktop/RedditCopyCat/Fontnhy/Shared/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL05hdk1lbnUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-i4o461wlvp
+[C:/Users/marcu/Desktop/RedditAPI/Fontnhy/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-9ljbyqraro

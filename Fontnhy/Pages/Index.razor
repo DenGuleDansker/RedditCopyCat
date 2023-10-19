@@ -26,32 +26,88 @@ else
         @foreach (var topic in topics)
         {
             <tr>
-                <!--
-                    These a href links will match the route in the page 'PostItem.razor'.
-                    The route is defined as "/post/{id}" and the id is the post id.
-                -->
-                <td><a href="/topic?id=@topic.TopicID">@topic.Title</a></td>
+                <td>@topic.Title</td>
                 <td>@topic.Description</td>
                 <td>@topic.Votes</td>
                 <td>@topic.Date</td>
-                @*<td>@(post.Upvotes - post.Downvotes)</td>*@
-                @*<td><button @onclick="() => Upvote(post.Id)">Upvote</button></td>
-        <td><button @onclick="() => Downvote(post.Id)">Downvote</button></td>*@
+                <td><button @onclick="() => TopicClicked((int)topic.TopicID)">Load Comments</button></td>
             </tr>
         }
     </table>
-
     <br />
+
+    @if (comments != null)
+    {
+        <h2>Comments for @clickedTopicTitle</h2>
+        <div class="comment-section">
+            @foreach (var comment in comments)
+            {
+                <div class="comment">
+                    <div class="comment-votes">
+                        <span>@comment.Votes</span>
+                    </div>
+                    <div class="comment-content">
+                        <p>@comment.Description</p>
+                        <p class="comment-user"><a href="">@comment.User</a></p>
+                        <p class="comment-date">@comment.Date</p>
+                    </div>
+                    
+                </div>
+            }
+        </div>
+    }
 }
+
+
+
 
 @code {
     private Topic[]? topics;
     //private Post? votePost;
 
+    private Comment[]? comments;
+
+    private string clickedTopicTitle;
+    //gemmer navnet for at vise det under comments
+
     protected override async Task OnInitializedAsync()
     {
         topics = await apiService.GetTopics();
     }
+
+    private async Task LoadComments(int topicId)
+    {
+        if (comments != null)
+        {
+            // Comments are already loaded, clear them
+            ClearComments();
+        }
+        else
+        {
+            // Comments are not loaded, load them
+            comments = await apiService.GetComments(topicId);
+        }
+        StateHasChanged(); // Request UI update
+    }
+
+
+
+    private async Task ClearComments()
+    {
+        comments = null;
+    }
+
+    
+    private async void TopicClicked(int topicId)
+    {
+        var clickedTopic = topics.FirstOrDefault(t => t.TopicID == topicId);
+        if (clickedTopic != null)
+        {
+            clickedTopicTitle = clickedTopic.Title;
+            await LoadComments(topicId);
+        }
+    }
+    //Tilføjet clickedTopic for at hente topics af det topic man trykker på, og derefter sætte clickedTopicTitle's værdi
 
     //private async void Upvote(int id)
     //{
