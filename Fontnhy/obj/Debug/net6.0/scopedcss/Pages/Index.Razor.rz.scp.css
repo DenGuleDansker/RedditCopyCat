@@ -1,14 +1,54 @@
-table[b-6tngkvcanx] {
+table[b-gif5wibab3] {
     border-collapse: collapse;
     width: 100%;
     border: 2px solid black; /* Set the border properties */
 }
 
-th[b-6tngkvcanx], td[b-6tngkvcanx] {
+th[b-gif5wibab3], td[b-gif5wibab3] {
     border: 1px solid black; /* Set the border properties */
     padding: 8px; /* Add some padding to your cells for better spacing */
 }
 
-th[b-6tngkvcanx] {
+th[b-gif5wibab3] {
     background-color: #f2f2f2; /* Optional background color for header cells */
 }
+
+.comment-user a[b-gif5wibab3] {
+    font-weight: bold;
+    color: #0079d3;
+    text-decoration: none;
+}
+
+.comment-user a:hover[b-gif5wibab3] {
+        text-decoration: underline;
+}
+
+<style >
+.comment-section[b-gif5wibab3] {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.comment[b-gif5wibab3] {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.comment-votes[b-gif5wibab3] {
+    width: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.comment-content[b-gif5wibab3] {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #eee;
+    background-color: #f9f9f9;
+}
+
+.comment-date[b-gif5wibab3] {
+    font-size: 12px;
+    color: #777;
+}
+</style[b-gif5wibab3]>
