@@ -93,6 +93,13 @@ app.MapPost("/api/comment", (DataService service, NewCommentData data) =>
     return service.CreateComment(data.description, data.user, data.date, data.votes, data.topicid);
 });
 
+app.MapPut("/api/{topicid}/upvote", (DataService service, int topicid) =>
+{
+    Console.WriteLine($"Received PUT request for topicid: {topicid}");
+    var result = service.UpvoteTopic(topicid);
+    Console.WriteLine($"Upvote result: {result}");
+    return result;
+});
 
 
 app.Run();
