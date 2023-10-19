@@ -1,0 +1,98 @@
+# Visual Studio / Rider
+.vscode/
+.idea/
+
+# Build output
+bin/
+obj/
+
+# User-specific files
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+
+# Package files
+*.nupkg
+project.lock.json
+
+# Entity Framework migrations
+/app/Data/Migrations/
+
+# User-specific VSCode settings
+.vscode/settings.json
+
+# User-specific Rider settings
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/vcs.xml
+.idea/webServers.xml
+
+# Visual Studio Code folder (if you use VS Code for frontend)
+.vscode/
+
+# Rider folder (if you use Rider for backend)
+.idea/
+
+# Compiled .NET assemblies
+*.dll
+*.pdb
+
+# NuGet Packages
+*.nupkg
+
+# User-specific files
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Aa][Rr][Cc][Hh]/
+[Bb][Ii][Nn]/
+[Oo][Bb][Jj]/
+[Ll][Oo][Gg][Ss]/
+[Ll][Oo][Gg]/
+
+# Visual Studio 2019 config folder
+.vs2019/
+.vs2019/
+
+# Rider config folder
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code folder
+.vscode/
+
+# User-specific files
+.history/
+
+# User-specific files
+.history/
