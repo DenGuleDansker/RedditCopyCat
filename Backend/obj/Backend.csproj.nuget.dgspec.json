@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jakob\\RedditProjekt\\Backend\\Backend.csproj": {}
+    "C:\\Users\\jakob\\ProjektReddit\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jakob\\RedditProjekt\\Backend\\Backend.csproj": {
+    "C:\\Users\\jakob\\ProjektReddit\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jakob\\RedditProjekt\\Backend\\Backend.csproj",
+        "projectUniqueName": "C:\\Users\\jakob\\ProjektReddit\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "C:\\Users\\jakob\\RedditProjekt\\Backend\\Backend.csproj",
+        "projectPath": "C:\\Users\\jakob\\ProjektReddit\\Backend\\Backend.csproj",
         "packagesPath": "C:\\Users\\jakob\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jakob\\RedditProjekt\\Backend\\obj\\",
+        "outputPath": "C:\\Users\\jakob\\ProjektReddit\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jakob\\AppData\\Roaming\\NuGet\\NuGet.Config",
