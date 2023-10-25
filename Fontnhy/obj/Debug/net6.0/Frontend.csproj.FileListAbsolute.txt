@@ -5067,3 +5067,4 @@ C:/Users/kaspe/Desktop/reddit/RedditCopyCat/Fontnhy/obj/Debug/net6.0/Frontend.dl
 C:/Users/kaspe/Desktop/reddit/RedditCopyCat/Fontnhy/obj/Debug/net6.0/refint/Frontend.dll
 C:/Users/kaspe/Desktop/reddit/RedditCopyCat/Fontnhy/obj/Debug/net6.0/Frontend.pdb
 C:/Users/kaspe/Desktop/reddit/RedditCopyCat/Fontnhy/obj/Debug/net6.0/ref/Frontend.dll
+/Users/chilinhm/Desktop/RedditCopyCat/Fontnhy/obj/Debug/net6.0/scopedcss/Pages/NewTopic.razor.rz.scp.css

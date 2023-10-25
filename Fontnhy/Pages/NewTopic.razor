@@ -43,12 +43,12 @@
 
 <div class="input-group mb-3">
     <input @bind="user" type="text" class="form-control" placeholder="Brugernavn" aria-label="Username" aria-describedby="basic-addon1">
-    <button @onclick="()=>CreateTopic(title,description,user, date, votes)" type="button" class="btn btn-danger mb-2">Post</button>
-
 </div>
+    <button @onclick="()=>CreateTopic(title,description,user, date, votes)" type="button" class="btn btn-success mb-2">Post</button>
 
 @code {
     private Topic newTopic = new Topic();
+
 
     string title = "";
     string description = "";
@@ -58,12 +58,13 @@
 
     private async void CreateTopic(string title, string description, string user, DateTime date, int votes)
     {
-        newTopic = await apiService.CreateTopic(title, description, user, date, votes);
+        Topic topic = await apiService.CreateTopic(new ApiService.TopicDTO(title, description, user, date, votes));
         title = "";
         description = "";
         user = "";
         votes = 0;
         Console.WriteLine("Det virker");
+        topic = new();
         StateHasChanged();
 
     }

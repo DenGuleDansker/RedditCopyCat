@@ -1,30 +1,32 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Fontnhy PreferredExecutionTarget="/Applications/Opera.app" />
+  <MonoDevelop.Ide.ItemProperties.Backend PreferredExecutionTarget="/Applications/Opera.app" />
   <MonoDevelop.Ide.Workbench ActiveDocument="../Fontnhy/Pages/NewTopic.razor">
     <Files>
       <File FileName="appsettings.json" />
-      <File FileName="../Fontnhy/Pages/Index.razor" Line="38" Column="2" />
+      <File FileName="../Fontnhy/Pages/Index.razor" />
       <File FileName="../Fontnhy/Pages/Index.razor.css" />
-      <File FileName="../Fontnhy/Service/ApiService.cs" Line="44" Column="41" />
+      <File FileName="../Fontnhy/Service/ApiService.cs" Line="42" Column="41" />
       <File FileName="../Fontnhy/Pages/CommentPage.razor" />
-      <File FileName="Service/Dataservice.cs" Line="54" Column="28" />
-      <File FileName="Program.cs" Line="77" Column="25" />
+      <File FileName="Service/Dataservice.cs" Line="66" Column="1" />
+      <File FileName="Program.cs" Line="85" Column="11" />
       <File FileName="../Shared1/Model/Comment.cs" />
       <File FileName="../Shared1/Model/Topic.cs" />
       <File FileName="../Fontnhy/Pages/Counter.razor" />
       <File FileName="../Fontnhy/Program.cs" />
       <File FileName="../../../../../usr/local/share/dotnet/sdk/7.0.400/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" />
-      <File FileName="../Fontnhy/Pages/NewTopic.razor" Line="66" Column="41" />
+      <File FileName="../Fontnhy/Pages/NewTopic.razor" Line="25" Column="28" />
+      <File FileName="../Fontnhy/NewTopic.razor.css" Line="9" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Backend" expanded="True">
-            <Node name="Backend" expanded="True">
-              <Node name="Service" expanded="True" />
-            </Node>
-            <Node name="Frontend" expanded="True">
-              <Node name="Pages" expanded="True" />
-              <Node name="Service" expanded="True" />
+          <Node name="Backend">
+            <Node name="Frontend">
+              <Node name="Pages" expanded="True">
+                <Node name="NewTopic.razor" expanded="True" selected="True" />
+              </Node>
             </Node>
             <Node name="Shared" expanded="True">
               <Node name="Model" expanded="True" />
@@ -34,15 +36,17 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Backend PreferredExecutionTarget="/Applications/Opera.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Frontend PreferredExecutionTarget="/Applications/Opera.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/chilinhm/Desktop/RedditCopyCat/Backend/Service/Dataservice.cs" relfile="Service/Dataservice.cs" line="79" column="1" />
+      <Breakpoint file="/Users/chilinhm/Desktop/RedditCopyCat/Backend/Service/Dataservice.cs" relfile="Service/Dataservice.cs" line="67" column="1" />
+      <Breakpoint file="/Users/chilinhm/Desktop/RedditCopyCat/Backend/Service/Dataservice.cs" relfile="Service/Dataservice.cs" line="68" column="1" />
+      <Breakpoint file="/Users/chilinhm/Desktop/RedditCopyCat/Backend/Service/Dataservice.cs" relfile="Service/Dataservice.cs" line="66" column="1" />
+      <Breakpoint file="/Users/chilinhm/Desktop/RedditCopyCat/Backend/Program.cs" relfile="Program.cs" line="82" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Frontend PreferredExecutionTarget="/Applications/Opera.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
       <Items>
@@ -51,5 +55,4 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
-  <MonoDevelop.Ide.ItemProperties.Fontnhy PreferredExecutionTarget="/Applications/Opera.app" />
 </Properties>

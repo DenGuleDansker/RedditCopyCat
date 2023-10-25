@@ -52,6 +52,26 @@ th[b-6tngkvcanx] {
     font-size: 12px;
     color: #777;
 }
+/* /Pages/NewTopic.razor.rz.scp.css */
+.input-group[b-jqu1oqgbkf] {
+    margin-bottom: 20px;
+}
+
+.form-control[b-jqu1oqgbkf] {
+    width: 100%;
+}
+
+.btn-danger[b-jqu1oqgbkf] {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+    .btn-danger:hover[b-jqu1oqgbkf] {
+        background-color: #c82333;
+    }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-gknvvqa2uj] {
     position: relative;

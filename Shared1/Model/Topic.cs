@@ -5,7 +5,7 @@ namespace Model
     {
         public Topic()
         {
-
+            ;
         }
 
         public Topic(string title, string description, string user)
