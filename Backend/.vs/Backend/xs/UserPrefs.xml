@@ -1,28 +1,30 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Service/Dataservice.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Fontnhy/Pages/NewTopic.razor">
     <Files>
       <File FileName="appsettings.json" />
-      <File FileName="../Fontnhy/Pages/Index.razor" Line="31" Column="49" />
+      <File FileName="../Fontnhy/Pages/Index.razor" Line="38" Column="2" />
       <File FileName="../Fontnhy/Pages/Index.razor.css" />
-      <File FileName="../Fontnhy/Service/ApiService.cs" Line="57" Column="25" />
+      <File FileName="../Fontnhy/Service/ApiService.cs" Line="44" Column="41" />
       <File FileName="../Fontnhy/Pages/CommentPage.razor" />
-      <File FileName="Service/Dataservice.cs" Line="72" Column="1" />
-      <File FileName="Program.cs" Line="130" Column="16" />
+      <File FileName="Service/Dataservice.cs" Line="54" Column="28" />
+      <File FileName="Program.cs" Line="77" Column="25" />
       <File FileName="../Shared1/Model/Comment.cs" />
       <File FileName="../Shared1/Model/Topic.cs" />
-      <File FileName="../Fontnhy/Pages/Counter.razor" Line="1" Column="1" />
+      <File FileName="../Fontnhy/Pages/Counter.razor" />
       <File FileName="../Fontnhy/Program.cs" />
       <File FileName="../../../../../usr/local/share/dotnet/sdk/7.0.400/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" />
-      <File FileName="../Fontnhy/Pages/NewTopic.razor" Line="37" Column="21" />
+      <File FileName="../Fontnhy/Pages/NewTopic.razor" Line="66" Column="41" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Backend">
-            <Node name="Backend">
-              <Node name="Service" expanded="True">
-                <Node name="Dataservice.cs" selected="True" />
-              </Node>
+          <Node name="Backend" expanded="True">
+            <Node name="Backend" expanded="True">
+              <Node name="Service" expanded="True" />
+            </Node>
+            <Node name="Frontend" expanded="True">
+              <Node name="Pages" expanded="True" />
+              <Node name="Service" expanded="True" />
             </Node>
             <Node name="Shared" expanded="True">
               <Node name="Model" expanded="True" />
@@ -33,13 +35,13 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.Backend PreferredExecutionTarget="/Applications/Opera.app" />
-  <MonoDevelop.Ide.ItemProperties.Frontend PreferredExecutionTarget="/Applications/Opera.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/chilinhm/Desktop/RedditCopyCat/Backend/Service/Dataservice.cs" relfile="Service/Dataservice.cs" line="79" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Frontend PreferredExecutionTarget="/Applications/Opera.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
