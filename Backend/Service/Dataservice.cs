@@ -43,21 +43,29 @@ public class DataService
         return db.Topics.Include(t => t.Comment).FirstOrDefault(b => b.TopicID == id)!;
     }
 
-    public string CreateTopic(Topic topicdata)
+    //public string CreateTopic(Topic topicdata)
+    //{
+
+    //    Topic topic = new Topic
+    //    {
+    //        Title = topicdata.Title,
+    //        Description = topicdata.Description,
+    //        User = topicdata.User,
+    //        Date = topicdata.Date,
+    //        Votes = topicdata.Votes
+    //    };
+
+    //    db.Topics.Add(topic);
+    //    db.SaveChanges();
+    //    return "Topic created, id: " + topic.TopicID;
+    //}
+
+    public string CreateTopic(string title, string description, string user, DateTime date, int votes)
     {
 
-        Topic topic = new Topic
-        {
-            Title = topicdata.Title,
-            Description = topicdata.Description,
-            User = topicdata.User,
-            Date = topicdata.Date,
-            Votes = topicdata.Votes
-        };
-
-        db.Topics.Add(topic);
+        db.Topics.Add(new Topic { Title = title, Description = description, User = user, Date = date, Votes = votes });
         db.SaveChanges();
-        return "Topic created, id: " + topic.TopicID;
+        return "Topic created";
     }
 
     // Comments
