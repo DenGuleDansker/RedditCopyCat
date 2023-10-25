@@ -109,18 +109,18 @@ app.MapPut("/api/topic/{topicid}/downvote", (DataService service, int topicid) =
     return result;
 });
 
-app.MapPut("/api/comment/{commentid}/upvote", (DataService service, int commentid) =>
+app.MapPut("/api/topic/{topicid}/comment/{commentid}/upvote", (DataService service, int commentid, int topicid) =>
 {
     Console.WriteLine($"Received PUT request for commentid: {commentid}");
-    var result = service.UpvoteComment(commentid);
+    var result = service.UpvoteComment(commentid, topicid);
     Console.WriteLine($"Upvote result: {result}");
     return result;
 });
 
-app.MapPut("/api/comment/{commentid}/downvote", (DataService service, int commentid) =>
+app.MapPut("/api/topic/{topicid}/comment/{commentid}/downvote", (DataService service, int commentid, int topicid) =>
 {
     Console.WriteLine($"Received PUT request for commentid: {commentid}");
-    var result = service.DownvoteComment(commentid);
+    var result = service.DownvoteComment(commentid, topicid);
     Console.WriteLine($"Downvote result: {result}");
     return result;
 });

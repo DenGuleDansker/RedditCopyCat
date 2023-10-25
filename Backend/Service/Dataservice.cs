@@ -62,14 +62,14 @@ public class DataService
 
     // Comments
 
-    public Comment GetComment(int topicId)
-    {
-        return db.Comment.First(c => c.CommentID == topicId);
-    }
-
     public List<Comment> GetComments(int topicId)
     {
         return db.Topics.Include(t => t.Comment).FirstOrDefault(b => b.TopicID == topicId)!.Comment.ToList();
+    }
+
+    public Comment GetComment(int topicId)
+    {
+        return db.Comment.First(c => c.CommentID == topicId);
     }
 
 
@@ -119,18 +119,21 @@ public class DataService
     }
 
 
-    public Comment UpvoteComment(int commentid)
+    public Comment UpvoteComment(int commentid, int topicid)
     {
         var comment = db.Comment.SingleOrDefault(t => t.CommentID == commentid);
+        var topic = db.Topics.SingleOrDefault(t => t.TopicID == topicid);
+
 
         comment.Votes++;
         db.SaveChanges(); // Save the changes to the database
         return comment; // Return the updated topic
     }
 
-    public Comment DownvoteComment(int commentId)
+    public Comment DownvoteComment(int commentId, int topicid)
     {
         var comment = db.Comment.SingleOrDefault(t => t.CommentID == commentId);
+        var topic = db.Topics.SingleOrDefault(t => t.TopicID == topicid);
 
         comment.Votes--;
         db.SaveChanges();

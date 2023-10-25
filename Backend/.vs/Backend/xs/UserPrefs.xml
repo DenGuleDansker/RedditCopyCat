@@ -1,7 +1,40 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
-  <MonoDevelop.Ide.ItemProperties.Backend PreferredExecutionTarget="/Applications/Opera.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Frontend PreferredExecutionTarget="/Applications/Opera.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Fontnhy/Pages/Index.razor">
+    <Files>
+      <File FileName="appsettings.json" Line="1" Column="1" />
+      <File FileName="../Fontnhy/Pages/Index.razor" Line="163" Column="46" />
+      <File FileName="../Fontnhy/Pages/Index.razor.css" />
+      <File FileName="../Fontnhy/Service/ApiService.cs" Line="40" Column="1" />
+      <File FileName="../Fontnhy/Pages/CommentPage.razor" Line="1" Column="1" />
+      <File FileName="Service/Dataservice.cs" Line="72" Column="1" />
+      <File FileName="Program.cs" Line="84" Column="4" />
+      <File FileName="../Shared1/Model/Comment.cs" Line="1" Column="1" />
+      <File FileName="../Shared1/Model/Topic.cs" Line="1" Column="1" />
+      <File FileName="../Fontnhy/Pages/Counter.razor" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Backend">
+            <Node name="Backend">
+              <Node name="Service" expanded="True" />
+            </Node>
+            <Node name="Frontend">
+              <Node name="Pages" expanded="True">
+                <Node name="Index.razor" selected="True" />
+              </Node>
+            </Node>
+            <Node name="Shared" expanded="True">
+              <Node name="Model" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
       <Items>
@@ -10,35 +43,14 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
-  <MonoDevelop.Ide.ItemProperties.Fontnhy PreferredExecutionTarget="/Applications/Opera.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
-    <Files>
-      <File FileName="Service/Dataservice.cs" Line="136" Column="24" />
-      <File FileName="../../../../../usr/local/share/dotnet/sdk/7.0.400/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" />
-      <File FileName="Program.cs" Line="126" Column="4" />
-      <File FileName="appsettings.json" Line="1" Column="1" />
-      <File FileName="../Fontnhy/Pages/Index.razor" Line="1" Column="1" />
-      <File FileName="../Fontnhy/Pages/Index.razor.css" Line="26" Column="1" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Backend">
-            <Node name="Backend" expanded="True">
-              <Node name="Service" expanded="True" />
-            </Node>
-            <Node name="Frontend">
-              <Node name="Pages" expanded="True">
-                <Node name="Index.razor" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/chilinhm/Desktop/RedditCopyCat/Backend/Service/Dataservice.cs" relfile="Service/Dataservice.cs" line="66" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Fontnhy PreferredExecutionTarget="/Applications/Opera.app" />
+  <MonoDevelop.Ide.ItemProperties.Frontend PreferredExecutionTarget="/Applications/Opera.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Backend PreferredExecutionTarget="/Applications/Opera.app" />
 </Properties>
