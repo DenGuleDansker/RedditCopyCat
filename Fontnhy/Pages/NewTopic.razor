@@ -1,0 +1,40 @@
+﻿@using Model;
+@page "/create-topic"
+
+<h3>Create a New Topic</h3>
+
+<EditForm Model="@newTopic" OnValidSubmit="CreateTopic">
+    <DataAnnotationsValidator />
+    <div class="form-group">
+        <label for="title">Title</label>
+        <InputText id="title" class="form-control" @bind-Value="newTopic.Title" />
+        <ValidationMessage For="@(() => newTopic.Title)" />
+    </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <InputText id="description" class="form-control" @bind-Value="newTopic.Description" />
+        <ValidationMessage For="@(() => newTopic.Description)" />
+    </div>
+    <div class="form-group">
+        <label for="user">User</label>
+        <InputText id="user" class="form-control" @bind-Value="newTopic.User" />
+        <ValidationMessage For="@(() => newTopic.User)" />
+    </div>
+    <div class="form-group">
+        <label for="date">Date</label>
+        <InputDate id="date" class="form-control" @bind-Value="newTopic.Date" />
+        <ValidationMessage For="@(() => newTopic.Date)" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create Topic</button>
+</EditForm>
+
+@code {
+    private Topic newTopic = new Topic();
+
+    private void CreateTopic()
+    {
+        
+        // Need to figure out how to send input through API to DB ... o_O
+        
+    }
+}
