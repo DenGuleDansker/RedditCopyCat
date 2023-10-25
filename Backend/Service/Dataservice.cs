@@ -116,6 +116,24 @@ public class DataService
         db.SaveChanges();
         return topic;
     }
-        
+
+
+    public Comment UpvoteComment(int commentid)
+    {
+        var comment = db.Comment.SingleOrDefault(t => t.CommentID == commentid);
+
+        comment.Votes++;
+        db.SaveChanges(); // Save the changes to the database
+        return comment; // Return the updated topic
+    }
+
+    public Comment DownvoteComment(int commentId)
+    {
+        var comment = db.Comment.SingleOrDefault(t => t.CommentID == commentId);
+
+        comment.Votes--;
+        db.SaveChanges();
+        return comment;
+    }
 
 }

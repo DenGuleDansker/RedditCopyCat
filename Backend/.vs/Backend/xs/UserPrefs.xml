@@ -1,75 +1,33 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
-  <MonoDevelop.Ide.ItemProperties.Frontend PreferredExecutionTarget="/Applications/Opera.app" />
-  <MultiItemStartupConfigurations>
-    <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
-      <Items>
-        <StartupItem ItemId="{72AE4BE2-0017-4A97-BB02-B5E64B821E73}" ItemName="Backend" ConfigurationId="Default" />
-        <StartupItem ItemId="{C1D661F9-01BD-4A2B-991C-B57E668574E2}" ItemName="Fontnhy" />
-      </Items>
-    </MultiItemSolutionRunConfiguration>
-  </MultiItemStartupConfigurations>
-  <MonoDevelop.Ide.ItemProperties.Backend PreferredExecutionTarget="/Applications/Opera.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../Fontnhy/Pages/CommentPage.razor">
+  <MonoDevelop.Ide.ItemProperties.Fontnhy PreferredExecutionTarget="/Applications/Opera.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Service/Dataservice.cs" Line="7" Column="13" />
-      <File FileName="Program.cs" Line="81" Column="18" />
-      <File FileName="../../../../../usr/local/share/dotnet/sdk/7.0.400/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" />
-      <File FileName="../Shared1/Model/Comment.cs" />
-      <File FileName="../Shared1/Model/Topic.cs" Line="1" Column="1" />
-      <File FileName="../Shared1/Model/TopicContext.cs" Line="1" Column="1" />
-      <File FileName="../Frontend/Service/ApiService.cs" Line="9" Column="24" />
-      <File FileName="../Frontend/Pages/Index.razor" Line="7" Column="28" />
-      <File FileName="appsettings.json" Line="1" Column="1" />
-      <File FileName="../Frontend/Client/Program.cs" Line="16" Column="1" />
-      <File FileName="../Frontend/Pages/Counter.razor" />
-      <File FileName="appsettings.Development.json" Line="1" Column="1" />
-      <File FileName="Properties/launchSettings.json" Line="23" Column="35" />
-      <File FileName="../Fontnhy/Pages/Index.razor" Line="49" Column="1" />
-      <File FileName="../Fontnhy/Program.cs" Line="16" Column="1" />
-      <File FileName="../Fontnhy/Shared/MainLayout.razor" Line="11" Column="19" />
-      <File FileName="../Fontnhy/Shared/MainLayout.razor.css" Line="1" Column="1" />
-      <File FileName="../Fontnhy/Shared/NavMenu.razor" Line="7" Column="11" />
-      <File FileName="../Fontnhy/Shared/CreateComment.razor" Line="1" Column="1" />
-      <File FileName="../Fontnhy/Shared/SurveyPrompt.razor" Line="9" Column="32" />
-      <File FileName="../Fontnhy/Properties/launchSettings.json" Line="1" Column="1" />
-      <File FileName="../Fontnhy/Pages/FetchData.razor" Line="44" Column="1" />
-      <File FileName="../Fontnhy/Pages/Counter.razor" Line="1" Column="1" />
-      <File FileName="../Fontnhy/wwwroot/index.html" Line="16" Column="1" />
-      <File FileName="../Fontnhy/Pages/Index.Razor.css" Line="10" Column="2" />
-      <File FileName="../Fontnhy/wwwroot/css/app.css" Line="60" Column="2" />
-      <File FileName="../Fontnhy/wwwroot/appsettings.json" Line="1" Column="1" />
-      <File FileName="../Fontnhy/_Imports.razor" Line="1" Column="1" />
-      <File FileName="../Fontnhy/App.razor" Line="1" Column="1" />
-      <File FileName="../Fontnhy/Service/ApiService.cs" Line="35" Column="6" />
+      <File FileName="Service/Dataservice.cs" />
+      <File FileName="../../../../../usr/local/share/dotnet/sdk/7.0.400/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" Line="266" Column="5" />
+      <File FileName="Program.cs" Line="113" Column="1" />
+      <File FileName="appsettings.json" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Backend">
-            <Node name="Backend">
-              <Node name="Service" expanded="True" />
-            </Node>
-            <Node name="Frontend">
-              <Node name="Pages">
-                <Node name="CommentPage.razor" selected="True" />
-                <Node name="Index.razor" expanded="True" />
-              </Node>
-              <Node name="Shared" expanded="True">
-                <Node name="MainLayout.razor" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="Shared">
-              <Node name="Model" expanded="True" />
-            </Node>
-          </Node>
+          <Node name="Backend" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Fontnhy PreferredExecutionTarget="/Applications/Opera.app" />
+  <MonoDevelop.Ide.ItemProperties.Backend PreferredExecutionTarget="/Applications/Opera.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Frontend PreferredExecutionTarget="/Applications/Opera.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
+      <Items>
+        <StartupItem ItemId="{72AE4BE2-0017-4A97-BB02-B5E64B821E73}" ItemName="Backend" ConfigurationId="Default" />
+        <StartupItem ItemId="{C1D661F9-01BD-4A2B-991C-B57E668574E2}" ItemName="Frontend" ConfigurationId="Fontnhy" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
 </Properties>
