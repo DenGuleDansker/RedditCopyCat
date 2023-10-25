@@ -72,15 +72,15 @@ app.MapGet("/api/topic/{id}", (DataService service, int id) =>
     return service.GetTopic(id);
 });
 
-//app.MapPost("/api/topics", (DataService service, Topic topicdata) =>
-//{
-//    return service.CreateTopic(topicdata);
-//});
-
-app.MapPost("/api/topics", (DataService service, TopicDTO data) =>
+app.MapPost("/api/topics", (DataService service, Topic topicdata) =>
 {
-    return service.CreateTopic(data.title, data.description, data.user, data.date, data.votes);
+    return service.CreateTopic(topicdata);
 });
+
+//app.MapPost("/api/topics", (DataService service, TopicDTO data) =>
+//{
+//    return service.CreateTopic(data.title, data.description, data.user, data.date, data.votes);
+//});
 
 //COMMENTS
 app.MapGet("/api/{topicid}/comments", (DataService service, int topicid) =>
