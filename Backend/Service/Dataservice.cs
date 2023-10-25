@@ -61,6 +61,7 @@ public class DataService
     }
 
     // Comments
+
     public Comment GetComment(int topicId)
     {
         return db.Comment.First(c => c.CommentID == topicId);
