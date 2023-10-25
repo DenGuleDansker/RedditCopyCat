@@ -23,7 +23,7 @@ else
             <th>Votes</th>
             <th>Date</th>
         </tr>
-        @foreach (var topic in topicsordered.Take(50)) //kun 50 første hits
+        @foreach (var topic in topics.Take(50)) //kun 50 første hits
         {
             <tr>
                 <td>@topic.Title</td>
@@ -80,9 +80,6 @@ else
     private Topic[]? topics;
     //private Post? votePost;
 
-    private List<Topic> topicsordered;
-    // topics, men sorteret efter dato
-
     private Comment[]? comments;
 
     private string clickedTopicTitle;
@@ -91,7 +88,6 @@ else
     protected override async Task OnInitializedAsync()
     {
         topics = await apiService.GetTopics();
-        topicsordered = topics.OrderByDescending(x => x.Date).ToList();
     }
 
     private async Task LoadComments(int topicId)
@@ -133,7 +129,6 @@ else
         var updatedPost = await apiService.UpvoteTopic(id);
 
         topics = await apiService.GetTopics();
-        topicsordered = topics.OrderByDescending(x => x.Date).ToList();
 
         StateHasChanged();
     }
@@ -143,7 +138,6 @@ else
         var updatedDownPost = await apiService.DownvoteTopic(id);
 
         topics = await apiService.GetTopics();
-        topicsordered = topics.OrderByDescending(x => x.Date).ToList();
 
         StateHasChanged();
     }
