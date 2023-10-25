@@ -36,7 +36,7 @@ public class DataService
     // Topics
     public List<Topic> GetTopics()
     {
-        return db.Topics.Include(t => t.Comment).ToList();
+        return db.Topics.Include(t => t.Comment).OrderByDescending(d => d.Date).ToList();
     }
     public Topic GetTopic(int id)
     {
