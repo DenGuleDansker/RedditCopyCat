@@ -16,6 +16,28 @@
 }
 else
 {
+
+    <EditForm Model="newTråd" OnValidSubmit="HandleValidSubmitTråd">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <div class="form-group">
+            <label for="Tråde_Overskrift">Overskrift</label>
+            <InputText id="Tråde_Overskrift" @bind-Value="newTråd.Tråde_Overskrift" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="Tekst">Tekst</label>
+            <InputText id="Tekst" @bind-Value="newTråd.Tekst" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label for="Brugernavn">Forfatternavn</label>
+            <InputText id="Brugernavn" @bind-Value="newTråd.bruger.Brugernavn" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Opret Tråd</button>
+    </EditForm>
+
     <table>
         <tr>
             <th>Title</th>
@@ -30,19 +52,21 @@ else
                 @if (@topic.Description.ToString().Contains("www.") || @topic.Description.ToString().Contains("https:") || @topic.Description.ToString().Contains("http:"))
                 {
                     <td><a href="@topic.Description">@topic.Description</a></td>
-                } else
+                }
+                else
                 {
                     <td>@topic.Description</td>
                 }
                 <td>
-                    @topic.Votes<span style="float: right;"> @*span style så knappen rykkes til højre*@
-                        <button @onclick="() => Upvote((int)topic.TopicID)">Upvote</button>
-                        <button @onclick="() => Downvote((int)topic.TopicID)">Downvote</button>
+                    @topic.Votes<span style="float: right;">
+                        @*span style så knappen rykkes til højre*@
+                        <button @onclick="() => UpvoteTopic((int)topic.TopicID)">Upvote</button>
+                        <button @onclick="() => DownvoteTopic((int)topic.TopicID)">Downvote</button>
                     </span>
                 </td>
 
 
-
+                git
 
                 <td>@topic.Date</td>
                 <td><button @onclick="() => TopicClicked((int)topic.TopicID)">Load Comments</button></td>
@@ -53,20 +77,23 @@ else
 
     @if (comments != null)
     {
-        <h2>Comments for @clickedTopicTitle</h2>
         <div class="comment-section">
             @foreach (var comment in comments)
             {
                 <div class="comment">
                     <div class="comment-votes">
-                        <span>@comment.Votes</span>
+                        <span>
+                            @comment.Votes
+                            <button @onclick="() => UpvoteComment((int)clickedTopicTitle, (int)comment.CommentID)">Upvote</button>
+                            <button @onclick="() => DownvoteComment((int)clickedTopicTitle, (int)comment.CommentID)">Downvote</button>
+                        </span>
                     </div>
                     <div class="comment-content">
                         <p>@comment.Description</p>
                         <p class="comment-user"><a href="">@comment.User</a></p>
                         <p class="comment-date">@comment.Date</p>
                     </div>
-                    
+
                 </div>
             }
         </div>
@@ -82,7 +109,9 @@ else
 
     private Comment[]? comments;
 
-    private string clickedTopicTitle;
+    private long clickedTopicTitle;
+
+    private long clickedcommentid = 0;
     //gemmer navnet for at vise det under comments
 
     protected override async Task OnInitializedAsync()
@@ -118,13 +147,13 @@ else
         var clickedTopic = topics.FirstOrDefault(t => t.TopicID == topicId);
         if (clickedTopic != null)
         {
-            clickedTopicTitle = clickedTopic.Title;
+            clickedTopicTitle = clickedTopic.TopicID;
             await LoadComments(topicId);
         }
     }
     //Tilføjet clickedTopic for at hente topics af det topic man trykker på, og derefter sætte clickedTopicTitle's værdi
 
-    private async void Upvote(int id)
+    private async void UpvoteTopic(int id)
     {
         var updatedPost = await apiService.UpvoteTopic(id);
 
@@ -133,11 +162,31 @@ else
         StateHasChanged();
     }
 
-    private async void Downvote(int id)
+    private async void DownvoteTopic(int id)
     {
         var updatedDownPost = await apiService.DownvoteTopic(id);
 
         topics = await apiService.GetTopics();
+
+        StateHasChanged();
+    }
+
+    private async void UpvoteComment(int id, int topicid)
+    {
+        var updatedPost = await apiService.UpvoteComment(id, topicid);
+
+
+        comments = await apiService.GetComments(id);
+
+        StateHasChanged();
+    }
+
+    private async void DownvoteComment(int id, int topicid)
+    {
+        var updatedDownPost = await apiService.DownvoteComment(id, topicid);
+
+
+        comments = await apiService.GetComments(id);
 
         StateHasChanged();
     }

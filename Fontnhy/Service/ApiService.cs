@@ -58,9 +58,10 @@ public class ApiService
         return newComment;
     }
 
+    //Topic upvote-downvote
     public async Task<Topic> UpvoteTopic(int topicid)
     {
-        string url = $"{baseAPI}{topicid}/upvote/";
+        string url = $"{baseAPI}topic/{topicid}/upvote/";
 
         // Post JSON to API, save the HttpResponseMessage
         HttpResponseMessage msg = await http.PutAsJsonAsync(url, "");
@@ -80,7 +81,7 @@ public class ApiService
 
     public async Task<Topic> DownvoteTopic(int topicid)
     {
-        string url = $"{baseAPI}{topicid}/downvote/";
+        string url = $"{baseAPI}topic/{topicid}/downvote/";
 
         // Post JSON to API, save the HttpResponseMessage
         HttpResponseMessage msg = await http.PutAsJsonAsync(url, "");
@@ -93,8 +94,48 @@ public class ApiService
         {
             PropertyNameCaseInsensitive = true // Ignore case when matching JSON properties to C# properties
         });
-
         // Return the updated post (vote increased)
         return updatedDownTopic;
+    }
+
+    //Comment upvote-downvote
+    public async Task<Comment> UpvoteComment(int topicid, int commentid)
+    {
+        string url = $"{baseAPI}topic/{topicid}/comment/{commentid}/upvote/";
+
+        // Post JSON to API, save the HttpResponseMessage
+        HttpResponseMessage msg = await http.PutAsJsonAsync(url, "");
+
+        // Get the JSON string from the response
+        string json = msg.Content.ReadAsStringAsync().Result;
+
+        // Deserialize the JSON string to a Post object
+        Comment? updatedComment = JsonSerializer.Deserialize<Comment>(json, new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true // Ignore case when matching JSON properties to C# properties
+        });
+
+        // Return the updated post (vote increased)
+        return updatedComment;
+    }
+
+    public async Task<Comment> DownvoteComment(int topicid, int commentid)
+    {
+        string url = $"{baseAPI}topic/{topicid}/comment/{commentid}/downvote/";
+
+        // Post JSON to API, save the HttpResponseMessage
+        HttpResponseMessage msg = await http.PutAsJsonAsync(url, "");
+
+        // Get the JSON string from the response
+        string json = msg.Content.ReadAsStringAsync().Result;
+
+        // Deserialize the JSON string to a Post object
+        Comment? updateDownComment = JsonSerializer.Deserialize<Comment>(json, new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true // Ignore case when matching JSON properties to C# properties
+        });
+
+        // Return the updated post (vote increased)
+        return updateDownComment;
     }
 }

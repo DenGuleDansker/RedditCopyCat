@@ -19,9 +19,9 @@ th {
     text-decoration: none;
 }
 
-.comment-user a:hover {
+    .comment-user a:hover {
         text-decoration: underline;
-}
+    }
 
 
 .comment-section {
@@ -35,14 +35,14 @@ th {
 }
 
 .comment-votes {
-    width: 50px;
+    width: 90px !important;
     text-align: center;
     font-weight: bold;
 }
 
 .comment-content {
     flex: 1;
-    padding: 5px;
+    padding: 3px;
     border: 1px solid #eee;
     background-color: #f9f9f9;
 }
@@ -51,5 +51,3 @@ th {
     font-size: 12px;
     color: #777;
 }
-
-
