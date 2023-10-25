@@ -685,7 +685,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "7.0.12"
+          "Microsoft.EntityFrameworkCore": "7.0.12",
+          "Microsoft.EntityFrameworkCore.Analyzers": "7.0.12"
         },
         "compile": {
           "bin/placeholder/Shared.dll": {}
@@ -1786,6 +1787,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 6.0.2",
+      "Microsoft.EntityFrameworkCore.Analyzers >= 7.0.12",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.12",
       "Microsoft.EntityFrameworkCore.SQLite >= 7.0.12",
       "Shared >= 1.0.0",
@@ -1793,34 +1795,33 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Bruger\\.nuget\\packages\\": {}
+    "/Users/chilinhm/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bruger\\Desktop\\Reddit\\Backend\\Backend.csproj",
+      "projectUniqueName": "/Users/chilinhm/Desktop/RedditCopyCat/Backend/Backend.csproj",
       "projectName": "Backend",
-      "projectPath": "C:\\Users\\Bruger\\Desktop\\Reddit\\Backend\\Backend.csproj",
-      "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bruger\\Desktop\\Reddit\\Backend\\obj\\",
+      "projectPath": "/Users/chilinhm/Desktop/RedditCopyCat/Backend/Backend.csproj",
+      "packagesPath": "/Users/chilinhm/.nuget/packages/",
+      "outputPath": "/Users/chilinhm/Desktop/RedditCopyCat/Backend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/chilinhm/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Bruger\\Desktop\\Reddit\\Shared1\\Shared.csproj": {
-              "projectPath": "C:\\Users\\Bruger\\Desktop\\Reddit\\Shared1\\Shared.csproj"
+            "/Users/chilinhm/Desktop/RedditCopyCat/Shared1/Shared.csproj": {
+              "projectPath": "/Users/chilinhm/Desktop/RedditCopyCat/Shared1/Shared.csproj"
             }
           }
         }
@@ -1838,6 +1839,10 @@
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",
             "version": "[6.0.2, )"
+          },
+          "Microsoft.EntityFrameworkCore.Analyzers": {
+            "target": "Package",
+            "version": "[7.0.12, )"
           },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -1873,7 +1878,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.400/RuntimeIdentifierGraph.json"
       }
     }
   }

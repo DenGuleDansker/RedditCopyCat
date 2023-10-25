@@ -9,6 +9,7 @@
       "Backend/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "6.0.2",
+          "Microsoft.EntityFrameworkCore.Analyzers": "7.0.12",
           "Microsoft.EntityFrameworkCore.Design": "7.0.12",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.12",
           "Shared": "1.0.0",
@@ -484,7 +485,8 @@
       },
       "Shared/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "7.0.12"
+          "Microsoft.EntityFrameworkCore": "7.0.12",
+          "Microsoft.EntityFrameworkCore.Analyzers": "7.0.12"
         },
         "runtime": {
           "Shared.dll": {}
