@@ -58,7 +58,7 @@
 
     private async void CreateTopic(string title, string description, string user, DateTime date, int votes)
     {
-        Topic topic = await apiService.CreateTopic(new ApiService.TopicDTO(title, description, user, date, votes));
+        Topic topic = await apiService.CreateTopic(title, description, user, date, votes);
         title = "";
         description = "";
         user = "";
@@ -66,6 +66,5 @@
         Console.WriteLine("Det virker");
         topic = new();
         StateHasChanged();
-
     }
 }

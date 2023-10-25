@@ -37,12 +37,12 @@ public class ApiService
         return await http.GetFromJsonAsync<Comment[]>(url);
     }
 
-    public async Task<Topic> CreateTopic(TopicDTO data)
+    public async Task<Topic> CreateTopic(string title, string description, string user, DateTime date, int votes)
     {
         string url = $"{baseAPI}topics";
 
         // Post JSON to API, save the HttpResponseMessage
-        HttpResponseMessage msg = await http.PostAsJsonAsync(url, new { data });
+        HttpResponseMessage msg = await http.PostAsJsonAsync(url, new { title, description, user, date, votes });
 
         // Get the JSON string from the response
         string json = msg.Content.ReadAsStringAsync().Result;
