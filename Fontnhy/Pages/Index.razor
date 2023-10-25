@@ -34,10 +34,10 @@ else
                 {
                     <td>@topic.Description</td>
                 }
-                <td>@topic.Votes</td>
+                <td>@topic.Votes</td> <td><button @onclick="() => Upvote((int)topic.TopicID)">Upvote</button></td> <td><button @onclick="() => Downvote((int)topic.TopicID)">Downvote</button></td>
+
                 <td>@topic.Date</td>
                 <td><button @onclick="() => TopicClicked((int)topic.TopicID)">Load Comments</button></td>
-                <td><button @onclick="() => Upvote((int)topic.TopicID)">Upvote</button></td>
             </tr>
         }
     </table>
@@ -121,12 +121,16 @@ else
         var updatedPost = await apiService.UpvoteTopic(id);
 
         topics = await apiService.GetTopics();
-        
+
         StateHasChanged();
     }
 
-    //private async void Downvote(int id)
-    //{
-    //    Console.WriteLine("Not implemented 😪");
-    //}
+    private async void Downvote(int id)
+    {
+        var updatedDownPost = await apiService.DownvoteTopic(id);
+
+        topics = await apiService.GetTopics();
+
+        StateHasChanged();
+    }
 }

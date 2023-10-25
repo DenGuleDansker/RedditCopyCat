@@ -77,4 +77,24 @@ public class ApiService
         // Return the updated post (vote increased)
         return updatedTopic;
     }
+
+    public async Task<Topic> DownvoteTopic(int topicid)
+    {
+        string url = $"{baseAPI}{topicid}/downvote/";
+
+        // Post JSON to API, save the HttpResponseMessage
+        HttpResponseMessage msg = await http.PutAsJsonAsync(url, "");
+
+        // Get the JSON string from the response
+        string json = msg.Content.ReadAsStringAsync().Result;
+
+        // Deserialize the JSON string to a Post object
+        Topic? updatedDownTopic = JsonSerializer.Deserialize<Topic>(json, new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true // Ignore case when matching JSON properties to C# properties
+        });
+
+        // Return the updated post (vote increased)
+        return updatedDownTopic;
+    }
 }
