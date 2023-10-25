@@ -15,6 +15,12 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Components.Analyzers/7.0.12": {
+        "type": "package",
+        "build": {
+          "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets": {}
+        }
+      },
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/6.0.2": {
         "type": "package",
         "dependencies": {
@@ -685,6 +691,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Components.Analyzers": "7.0.12",
           "Microsoft.EntityFrameworkCore": "7.0.12",
           "Microsoft.EntityFrameworkCore.Analyzers": "7.0.12"
         },
@@ -714,6 +721,22 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.Analyzers/7.0.12": {
+      "sha512": "4KrR8km+lOTRUsNVe4pumHUNvJK7UQUzVSqhTYXTz/wwU+eQ9TJ7QZn8xcrcbFCz6PzoG5esviCRC31mHAWBSQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.analyzers/7.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "analyzers/dotnet/cs/Microsoft.AspNetCore.Components.Analyzers.dll",
+        "build/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
+        "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
+        "microsoft.aspnetcore.components.analyzers.7.0.12.nupkg.sha512",
+        "microsoft.aspnetcore.components.analyzers.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/6.0.2": {
@@ -1795,34 +1818,33 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kaspe\\.nuget\\packages\\": {}
+    "/Users/chilinhm/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kaspe\\Desktop\\reddit\\RedditCopyCat\\Backend\\Backend.csproj",
+      "projectUniqueName": "/Users/chilinhm/Desktop/RedditCopyCat/Backend/Backend.csproj",
       "projectName": "Backend",
-      "projectPath": "C:\\Users\\kaspe\\Desktop\\reddit\\RedditCopyCat\\Backend\\Backend.csproj",
-      "packagesPath": "C:\\Users\\kaspe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kaspe\\Desktop\\reddit\\RedditCopyCat\\Backend\\obj\\",
+      "projectPath": "/Users/chilinhm/Desktop/RedditCopyCat/Backend/Backend.csproj",
+      "packagesPath": "/Users/chilinhm/.nuget/packages/",
+      "outputPath": "/Users/chilinhm/Desktop/RedditCopyCat/Backend/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kaspe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/chilinhm/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\kaspe\\Desktop\\reddit\\RedditCopyCat\\Shared1\\Shared.csproj": {
-              "projectPath": "C:\\Users\\kaspe\\Desktop\\reddit\\RedditCopyCat\\Shared1\\Shared.csproj"
+            "/Users/chilinhm/Desktop/RedditCopyCat/Shared1/Shared.csproj": {
+              "projectPath": "/Users/chilinhm/Desktop/RedditCopyCat/Shared1/Shared.csproj"
             }
           }
         }
@@ -1879,7 +1901,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.400/RuntimeIdentifierGraph.json"
       }
     }
   }
