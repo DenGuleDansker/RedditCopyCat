@@ -37,8 +37,10 @@ else
                 <td>
                     @topic.Votes<span style="float: right;"> @*span style så knappen rykkes til højre*@
                         <button @onclick="() => Upvote((int)topic.TopicID)">Upvote</button>
+                        <button @onclick="() => Downvote((int)topic.TopicID)">Downvote</button>
                     </span>
                 </td>
+
 
 
 

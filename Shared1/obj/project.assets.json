@@ -956,6 +956,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.EntityFrameworkCore >= 7.0.12",
+      "Microsoft.EntityFrameworkCore.Analyzers >= 7.0.12",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.12"
     ]
   },
@@ -999,6 +1000,10 @@
         "targetAlias": "net6.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[7.0.12, )"
+          },
+          "Microsoft.EntityFrameworkCore.Analyzers": {
             "target": "Package",
             "version": "[7.0.12, )"
           },
