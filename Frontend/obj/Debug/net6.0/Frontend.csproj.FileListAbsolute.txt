@@ -1,6 +1,0 @@
-/Users/chilinhm/Desktop/RedditCopyCat/Frontend/obj/Debug/net6.0/Frontend.csproj.AssemblyReference.cache
-/Users/chilinhm/Desktop/RedditCopyCat/Frontend/obj/Debug/net6.0/Frontend.GeneratedMSBuildEditorConfig.editorconfig
-/Users/chilinhm/Desktop/RedditCopyCat/Frontend/obj/Debug/net6.0/Frontend.AssemblyInfoInputs.cache
-/Users/chilinhm/Desktop/RedditCopyCat/Frontend/obj/Debug/net6.0/Frontend.AssemblyInfo.cs
-/Users/chilinhm/Desktop/RedditCopyCat/Frontend/obj/Debug/net6.0/Frontend.csproj.CoreCompileInputs.cache
-/Users/chilinhm/Desktop/RedditCopyCat/Frontend/obj/Debug/net6.0/Frontend.MvcApplicationPartsAssemblyInfo.cache
