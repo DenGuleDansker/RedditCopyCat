@@ -9,8 +9,9 @@
 @inject IConfiguration Configuration
 @inject IJSRuntime JSRuntime
 
-//JavaScript til at disble knapper på en post efter der er up- eller ned votet
+
 <script>
+    //JavaScript til at disble knapper på en post efter der er up- eller ned votet
     function toggleButtonsTopic(ID) {
         const buttonup = document.getElementById('up_' + ID);
         const buttondwn = document.getElementById('dwn_' + ID);
