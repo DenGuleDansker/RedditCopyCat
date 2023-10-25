@@ -103,11 +103,9 @@ public class DataService
 {
     var topic = db.Topics.SingleOrDefault(t => t.TopicID == topicId);
     
-    var upvoteCounter = topic.Votes;
-
-        upvoteCounter++;
+        topic.Votes++;
         db.SaveChanges(); // Save the changes to the database
-        return upvoteCounter; // Return the updated topic
+        return topic.Votes; // Return the updated topic
 }
 
 }
