@@ -7,6 +7,17 @@
 
 @using Microsoft.Extensions.Configuration
 @inject IConfiguration Configuration
+@inject IJSRuntime JSRuntime
+
+//JavaScript til at disble knapper på en post efter der er up- eller ned votet
+<script>
+    function togglebuttons(ID) {
+        const buttonup = document.getElementById('up_' + ID);
+        const buttondwn = document.getElementById('dwn_' + ID);
+        buttonup.disabled = true;
+        buttondwn.disabled = true;
+    }
+</script>
 
 <h1>Welcome to RedditCopyCat</h1>
 
@@ -36,8 +47,8 @@ else
                 }
                 <td>
                     @topic.Votes<span style="float: right;"> @*span style så knappen rykkes til højre*@
-                        <button @onclick="() => Upvote((int)topic.TopicID)">Upvote</button>
-                        <button @onclick="() => Downvote((int)topic.TopicID)">Downvote</button>
+                        <button id="up_@topic.TopicID" @onclick="() => Upvote((int)topic.TopicID)">Upvote</button>
+                        <button id="dwn_@topic.TopicID" @onclick="() => Downvote((int)topic.TopicID)">Downvote</button>
                     </span>
                 </td>
 
@@ -129,6 +140,7 @@ else
         var updatedPost = await apiService.UpvoteTopic(id);
 
         topics = await apiService.GetTopics();
+        await JSRuntime.InvokeVoidAsync("togglebuttons", id); //kører JS funktionen togglebuttons
 
         StateHasChanged();
     }
@@ -138,6 +150,7 @@ else
         var updatedDownPost = await apiService.DownvoteTopic(id);
 
         topics = await apiService.GetTopics();
+        await JSRuntime.InvokeVoidAsync("togglebuttons", id);  //kører JS funktionen togglebuttons
 
         StateHasChanged();
     }
