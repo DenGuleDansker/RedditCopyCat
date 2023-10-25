@@ -105,7 +105,7 @@ public class DataService
     
         topic.Votes++;
         db.SaveChanges(); // Save the changes to the database
-        return topic;
+        return topic; // Return the updated topic
 }
 
 }

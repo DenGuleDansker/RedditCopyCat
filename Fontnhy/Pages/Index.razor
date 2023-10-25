@@ -1,4 +1,4 @@
-﻿@page "/"
+@page "/"
 @inherits LayoutComponentBase
 
 @using Model
@@ -27,11 +27,17 @@ else
         {
             <tr>
                 <td>@topic.Title</td>
-                <td>@topic.Description</td>
+                @if (@topic.Description.ToString().Contains("www.") || @topic.Description.ToString().Contains("https:") || @topic.Description.ToString().Contains("http:"))
+                {
+                    <td><a href="@topic.Description">@topic.Description</a></td>
+                } else
+                {
+                    <td>@topic.Description</td>
+                }
                 <td>@topic.Votes</td>
                 <td>@topic.Date</td>
                 <td><button @onclick="() => TopicClicked((int)topic.TopicID)">Load Comments</button></td>
-                <td><button @onclick="() => Upvote(Convert.ToInt32(topic.TopicID))">Upvote</button></td>
+                <td><button @onclick="() => Upvote((int)topic.TopicID)">Upvote</button></td>
             </tr>
         }
     </table>
@@ -98,7 +104,7 @@ else
         comments = null;
     }
 
-    
+
     private async void TopicClicked(int topicId)
     {
         var clickedTopic = topics.FirstOrDefault(t => t.TopicID == topicId);
@@ -112,7 +118,11 @@ else
 
     private async void Upvote(int id)
     {
-       var updatedPost = await apiService.UpvoteTopic(id);
+        var updatedPost = await apiService.UpvoteTopic(id);
+
+        topics = await apiService.GetTopics();
+        
+        StateHasChanged();
     }
 
     //private async void Downvote(int id)
