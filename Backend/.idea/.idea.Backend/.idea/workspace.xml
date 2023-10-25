@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ce452d02-af0c-4a21-a566-0997f0f0028f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.vs/Backend/xs/UserPrefs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Backend/xs/UserPrefs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Backend.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Backend.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Backend.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Backend.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Backend.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Backend.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Backend.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Backend.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Backend.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Backend.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Backend.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Backend.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Backend.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fontnhy/Frontend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../Fontnhy/Frontend.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fontnhy/obj/Debug/net6.0/Frontend.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../Fontnhy/obj/Debug/net6.0/Frontend.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fontnhy/obj/Debug/net6.0/Frontend.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Fontnhy/obj/Debug/net6.0/Frontend.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fontnhy/obj/Debug/net6.0/Frontend.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Fontnhy/obj/Debug/net6.0/Frontend.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fontnhy/obj/Frontend.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Fontnhy/obj/Frontend.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fontnhy/obj/Frontend.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../Fontnhy/obj/Frontend.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fontnhy/obj/Frontend.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../Fontnhy/obj/Frontend.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fontnhy/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Fontnhy/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fontnhy/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Fontnhy/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shared1/Shared.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../Shared1/Shared.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shared1/obj/Debug/net6.0/Shared.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../Shared1/obj/Debug/net6.0/Shared.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shared1/obj/Debug/net6.0/Shared.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Shared1/obj/Debug/net6.0/Shared.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shared1/obj/Debug/net6.0/Shared.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Shared1/obj/Debug/net6.0/Shared.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shared1/obj/Debug/net6.0/Shared.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Shared1/obj/Debug/net6.0/Shared.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shared1/obj/Shared.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Shared1/obj/Shared.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shared1/obj/Shared.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../Shared1/obj/Shared.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shared1/obj/Shared.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../Shared1/obj/Shared.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shared1/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Shared1/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shared1/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Shared1/obj/project.nuget.cache" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="2XFG0fnAaKlhEMQALP9vworERzy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ce452d02-af0c-4a21-a566-0997f0f0028f" name="Changes" comment="" />
+      <created>1698217194369</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698217194369</updated>
+      <workItem from="1698217196322" duration="2000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

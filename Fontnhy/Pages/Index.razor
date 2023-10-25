@@ -1,4 +1,4 @@
-﻿@page "/"
+@page "/"
 @inherits LayoutComponentBase
 
 @using Model
@@ -27,7 +27,13 @@ else
         {
             <tr>
                 <td>@topic.Title</td>
-                <td>@topic.Description</td>
+                @if (@topic.Description.ToString().Contains("www.") || @topic.Description.ToString().Contains("https:") || @topic.Description.ToString().Contains("http:"))
+                {
+                    <td><a href="@topic.Description">@topic.Description</a></td>
+                } else
+                {
+                    <td>@topic.Description</td>
+                }
                 <td>@topic.Votes</td>
                 <td>@topic.Date</td>
                 <td><button @onclick="() => TopicClicked((int)topic.TopicID)">Load Comments</button></td>

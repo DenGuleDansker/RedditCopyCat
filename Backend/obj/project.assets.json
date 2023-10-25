@@ -1786,6 +1786,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 6.0.2",
+      "Microsoft.EntityFrameworkCore.Analyzers >= 7.0.12",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.12",
       "Microsoft.EntityFrameworkCore.SQLite >= 7.0.12",
       "Shared >= 1.0.0",
@@ -1838,6 +1839,10 @@
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",
             "version": "[6.0.2, )"
+          },
+          "Microsoft.EntityFrameworkCore.Analyzers": {
+            "target": "Package",
+            "version": "[7.0.12, )"
           },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
