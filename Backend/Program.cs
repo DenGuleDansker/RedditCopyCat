@@ -101,6 +101,14 @@ app.MapPut("/api/{topicid}/upvote", (DataService service, int topicid) =>
     return result;
 });
 
+app.MapPut("/api/{topicid}/downvote", (DataService service, int topicid) =>
+{
+    Console.WriteLine($"Received PUT request for topicid: {topicid}");
+    var result = service.DownvoteTopic(topicid);
+    Console.WriteLine($"Downvote result: {result}");
+    return result;
+});
+
 
 app.Run();
 

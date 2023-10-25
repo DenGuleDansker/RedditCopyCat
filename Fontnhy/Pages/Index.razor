@@ -127,12 +127,16 @@ else
         var updatedPost = await apiService.UpvoteTopic(id);
 
         topics = await apiService.GetTopics();
-        
+
         StateHasChanged();
     }
 
-    //private async void Downvote(int id)
-    //{
-    //    Console.WriteLine("Not implemented 😪");
-    //}
+    private async void Downvote(int id)
+    {
+        var updatedDownPost = await apiService.DownvoteTopic(id);
+
+        topics = await apiService.GetTopics();
+
+        StateHasChanged();
+    }
 }

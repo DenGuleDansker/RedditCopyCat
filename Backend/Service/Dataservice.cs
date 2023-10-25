@@ -25,10 +25,10 @@ public class DataService
     //    {
     //        topic = new Topic { Title = "Hej" };
     //        db.Topics.Add(topic);
-  
+
     //    }
 
-   
+
     //    db.SaveChanges();
     //}
 
@@ -46,13 +46,13 @@ public class DataService
     public string CreateTopic(Topic topicdata)
     {
 
-        Topic topic = new Topic 
+        Topic topic = new Topic
         {
-        Title = topicdata.Title,
-        Description = topicdata.Description,
-        User = topicdata.User,
-        Date = topicdata.Date,
-        Votes = topicdata.Votes
+            Title = topicdata.Title,
+            Description = topicdata.Description,
+            User = topicdata.User,
+            Date = topicdata.Date,
+            Votes = topicdata.Votes
         };
 
         db.Topics.Add(topic);
@@ -100,12 +100,22 @@ public class DataService
     }
 
     public Topic UpvoteTopic(int topicId)
-{
-    var topic = db.Topics.SingleOrDefault(t => t.TopicID == topicId);
-    
+    {
+        var topic = db.Topics.SingleOrDefault(t => t.TopicID == topicId);
+
         topic.Votes++;
         db.SaveChanges(); // Save the changes to the database
         return topic; // Return the updated topic
-}
+    }
+
+    public Topic DownvoteTopic(int topicId)
+    {
+        var topic = db.Topics.SingleOrDefault(t => t.TopicID == topicId);
+
+        topic.Votes--;
+        db.SaveChanges();
+        return topic;
+    }
+        
 
 }
