@@ -34,7 +34,14 @@ else
                 {
                     <td>@topic.Description</td>
                 }
-                <td>@topic.Votes<button @onclick="() => Upvote((int)topic.TopicID)">Upvote</button></td>
+                <td>
+                    @topic.Votes<span style="float: right;">
+                        <button @onclick="() => Upvote((int)topic.TopicID)">Upvote</button>
+                    </span>
+                </td>
+
+
+
                 <td>@topic.Date</td>
                 <td><button @onclick="() => TopicClicked((int)topic.TopicID)">Load Comments</button></td>
             </tr>
