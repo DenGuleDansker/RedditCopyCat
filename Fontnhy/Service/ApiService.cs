@@ -58,23 +58,23 @@ public class ApiService
         return newComment;
     }
 
-    //public async Task<Post> UpvotePost(int id)
-    //{
-    //    string url = $"{baseAPI}posts/{id}/upvote/";
+    public async Task<Topic> UpvoteTopic(int topicid)
+    {
+        string url = $"{baseAPI}/{topicid}/upvote/";
 
-    //    // Post JSON to API, save the HttpResponseMessage
-    //    HttpResponseMessage msg = await http.PutAsJsonAsync(url, "");
+        // Post JSON to API, save the HttpResponseMessage
+        HttpResponseMessage msg = await http.PutAsJsonAsync(url, "");
 
-    //    // Get the JSON string from the response
-    //    string json = msg.Content.ReadAsStringAsync().Result;
+        // Get the JSON string from the response
+        string json = msg.Content.ReadAsStringAsync().Result;
 
-    //    // Deserialize the JSON string to a Post object
-    //    Post? updatedPost = JsonSerializer.Deserialize<Post>(json, new JsonSerializerOptions
-    //    {
-    //        PropertyNameCaseInsensitive = true // Ignore case when matching JSON properties to C# properties
-    //    });
+        // Deserialize the JSON string to a Post object
+        Topic? updatedTopic = JsonSerializer.Deserialize<Topic>(json, new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true // Ignore case when matching JSON properties to C# properties
+        });
 
-    //    // Return the updated post (vote increased)
-    //    return updatedPost;
-    //}
+        // Return the updated post (vote increased)
+        return updatedTopic;
+    }
 }

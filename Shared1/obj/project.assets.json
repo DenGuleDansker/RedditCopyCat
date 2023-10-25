@@ -960,19 +960,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jakob\\.nuget\\packages\\": {}
+    "C:\\Users\\Bruger\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jakob\\ProjektReddit\\Shared1\\Shared.csproj",
+      "projectUniqueName": "C:\\Users\\Bruger\\Desktop\\Reddit\\Shared1\\Shared.csproj",
       "projectName": "Shared",
-      "projectPath": "C:\\Users\\jakob\\ProjektReddit\\Shared1\\Shared.csproj",
-      "packagesPath": "C:\\Users\\jakob\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jakob\\ProjektReddit\\Shared1\\obj\\",
+      "projectPath": "C:\\Users\\Bruger\\Desktop\\Reddit\\Shared1\\Shared.csproj",
+      "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Bruger\\Desktop\\Reddit\\Shared1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jakob\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1020,26 +1020,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.16, 6.0.16]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.16, 6.0.16]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.16, 6.0.16]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

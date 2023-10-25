@@ -31,6 +31,7 @@ else
                 <td>@topic.Votes</td>
                 <td>@topic.Date</td>
                 <td><button @onclick="() => TopicClicked((int)topic.TopicID)">Load Comments</button></td>
+                <td><button @onclick="() => Upvote(Convert.ToInt32(topic.TopicID))">Upvote</button></td>
             </tr>
         }
     </table>
@@ -109,10 +110,10 @@ else
     }
     //Tilføjet clickedTopic for at hente topics af det topic man trykker på, og derefter sætte clickedTopicTitle's værdi
 
-    //private async void Upvote(int id)
-    //{
-    //    var updatedPost = await apiService.UpvotePost(id);
-    //}
+    private async void Upvote(int id)
+    {
+       var updatedPost = await apiService.UpvoteTopic(id);
+    }
 
     //private async void Downvote(int id)
     //{

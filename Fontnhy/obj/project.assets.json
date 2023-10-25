@@ -2054,19 +2054,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jakob\\.nuget\\packages\\": {}
+    "C:\\Users\\Bruger\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jakob\\ProjektReddit\\Fontnhy\\Frontend.csproj",
+      "projectUniqueName": "C:\\Users\\Bruger\\Desktop\\Reddit\\Fontnhy\\Frontend.csproj",
       "projectName": "Frontend",
-      "projectPath": "C:\\Users\\jakob\\ProjektReddit\\Fontnhy\\Frontend.csproj",
-      "packagesPath": "C:\\Users\\jakob\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jakob\\ProjektReddit\\Fontnhy\\obj\\",
+      "projectPath": "C:\\Users\\Bruger\\Desktop\\Reddit\\Fontnhy\\Frontend.csproj",
+      "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Bruger\\Desktop\\Reddit\\Fontnhy\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jakob\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2080,8 +2080,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\jakob\\ProjektReddit\\Shared1\\Shared.csproj": {
-              "projectPath": "C:\\Users\\jakob\\ProjektReddit\\Shared1\\Shared.csproj"
+            "C:\\Users\\Bruger\\Desktop\\Reddit\\Shared1\\Shared.csproj": {
+              "projectPath": "C:\\Users\\Bruger\\Desktop\\Reddit\\Shared1\\Shared.csproj"
             }
           }
         }
@@ -2119,20 +2119,8 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.16, 6.0.16]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.16, 6.0.16]"
-          },
-          {
             "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-            "version": "[6.0.16, 6.0.16]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.16, 6.0.16]"
+            "version": "[6.0.21, 6.0.21]"
           }
         ],
         "frameworkReferences": {
@@ -2140,7 +2128,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
