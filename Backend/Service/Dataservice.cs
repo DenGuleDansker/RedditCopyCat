@@ -61,12 +61,12 @@ public class DataService
     }
 
     // Comments
-    public List<Comment> GetComment(int topicId)
+    public Comment GetComment(int topicId)
     {
-        return db.Topics.Include(t => t.Comment).FirstOrDefault(b => b.TopicID == topicId)!.Comment.ToList();
+        return db.Comment.First(c => c.CommentID == topicId);
     }
 
-    public List<Comment> GetComments(int topicId, int commentId)
+    public List<Comment> GetComments(int topicId)
     {
         return db.Topics.Include(t => t.Comment).FirstOrDefault(b => b.TopicID == topicId)!.Comment.ToList();
     }

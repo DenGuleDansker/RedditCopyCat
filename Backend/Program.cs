@@ -80,12 +80,12 @@ app.MapPost("/api/topics", (DataService service, Topic topicdata) =>
 //COMMENTS
 app.MapGet("/api/{topicid}/comments", (DataService service, int topicid) =>
 {
-    return service.GetComment(topicid);
+    return service.GetComments(topicid);
 });
 
 app.MapGet("/api/topics/{topicid}/comments/{commentid}", (DataService service, int topicid, int commentid) =>
 {
-    return service.GetComments(topicid, commentid);
+    return service.GetComment(commentid);
 });
 
 app.MapPost("/api/comment", (DataService service, NewCommentData data) =>
