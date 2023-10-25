@@ -42,10 +42,6 @@
 </div>
 
 <div class="input-group mb-3">
-    <input @bind="date" type="datetime" class="form-control" placeholder="Hvad har du på hjertet?" aria-label="Username" aria-describedby="basic-addon1">
-</div>
-
-<div class="input-group mb-3">
     <input @bind="user" type="text" class="form-control" placeholder="Brugernavn" aria-label="Username" aria-describedby="basic-addon1">
     <button @onclick="()=>CreateTopic(title,description,user, date, votes)" type="button" class="btn btn-danger mb-2">Post</button>
 
