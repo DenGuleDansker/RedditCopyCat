@@ -7,6 +7,24 @@
 
 @using Microsoft.Extensions.Configuration
 @inject IConfiguration Configuration
+@inject IJSRuntime JSRuntime
+
+//JavaScript til at disble knapper på en post efter der er up- eller ned votet
+<script>
+    function toggleButtonsTopic(ID) {
+        const buttonup = document.getElementById('up_' + ID);
+        const buttondwn = document.getElementById('dwn_' + ID);
+        buttonup.disabled = true;
+        buttondwn.disabled = true;
+    }
+
+    function toggleButtonsComment(ID) {
+        const cbuttonup = document.getElementById('cup_' + ID);
+        const cbuttondwn = document.getElementById('cdwn_' + ID);
+        cbuttonup.disabled = true;
+        cbuttondwn.disabled = true;
+    }
+</script>
 
 <h1>Welcome to RedditCopyCat</h1>
 
@@ -16,28 +34,6 @@
 }
 else
 {
-
-    <EditForm Model="newTråd" OnValidSubmit="HandleValidSubmitTråd">
-        <DataAnnotationsValidator />
-        <ValidationSummary />
-        <div class="form-group">
-            <label for="Tråde_Overskrift">Overskrift</label>
-            <InputText id="Tråde_Overskrift" @bind-Value="newTråd.Tråde_Overskrift" class="form-control" />
-        </div>
-
-        <div class="form-group">
-            <label for="Tekst">Tekst</label>
-            <InputText id="Tekst" @bind-Value="newTråd.Tekst" class="form-control" />
-        </div>
-
-        <div class="form-group">
-            <label for="Brugernavn">Forfatternavn</label>
-            <InputText id="Brugernavn" @bind-Value="newTråd.bruger.Brugernavn" class="form-control" />
-        </div>
-
-        <button type="submit" class="btn btn-primary">Opret Tråd</button>
-    </EditForm>
-
     <table>
         <tr>
             <th>Title</th>
@@ -60,14 +56,10 @@ else
                 <td>
                     @topic.Votes<span style="float: right;">
                         @*span style så knappen rykkes til højre*@
-                        <button @onclick="() => UpvoteTopic((int)topic.TopicID)">Upvote</button>
-                        <button @onclick="() => DownvoteTopic((int)topic.TopicID)">Downvote</button>
+                        <button id="up_@topic.TopicID" @onclick="() => UpvoteTopic((int)topic.TopicID)">Upvote</button>
+                        <button id="dwn_@topic.TopicID" @onclick="() => DownvoteTopic((int)topic.TopicID)">Downvote</button>
                     </span>
                 </td>
-
-
-                git
-
                 <td>@topic.Date</td>
                 <td><button @onclick="() => TopicClicked((int)topic.TopicID)">Load Comments</button></td>
             </tr>
@@ -84,8 +76,8 @@ else
                     <div class="comment-votes">
                         <span>
                             @comment.Votes
-                            <button @onclick="() => UpvoteComment((int)clickedTopicTitle, (int)comment.CommentID)">Upvote</button>
-                            <button @onclick="() => DownvoteComment((int)clickedTopicTitle, (int)comment.CommentID)">Downvote</button>
+                            <button id="cup_@comment.CommentID" @onclick="() => UpvoteComment((int)clickedTopicTitle, (int)comment.CommentID)">Upvote</button>
+                            <button id="cdwn_@comment.CommentID" @onclick="() => DownvoteComment((int)clickedTopicTitle, (int)comment.CommentID)">Downvote</button>
                         </span>
                     </div>
                     <div class="comment-content">
@@ -99,9 +91,6 @@ else
         </div>
     }
 }
-
-
-
 
 @code {
     private Topic[]? topics;
@@ -158,6 +147,7 @@ else
         var updatedPost = await apiService.UpvoteTopic(id);
 
         topics = await apiService.GetTopics();
+        await JSRuntime.InvokeVoidAsync("toggleButtonsTopic", id); //kører JS funktionen togglebuttons
 
         StateHasChanged();
     }
@@ -165,6 +155,7 @@ else
     private async void DownvoteTopic(int id)
     {
         var updatedDownPost = await apiService.DownvoteTopic(id);
+        await JSRuntime.InvokeVoidAsync("toggleButtonsTopic", id); //kører JS funktionen togglebuttons
 
         topics = await apiService.GetTopics();
 
@@ -175,6 +166,7 @@ else
     {
         var updatedPost = await apiService.UpvoteComment(id, topicid);
 
+        await JSRuntime.InvokeVoidAsync("toggleButtonsComment", topicid); //kører JS funktionen togglebuttons
 
         comments = await apiService.GetComments(id);
 
@@ -185,6 +177,7 @@ else
     {
         var updatedDownPost = await apiService.DownvoteComment(id, topicid);
 
+        await JSRuntime.InvokeVoidAsync("toggleButtonsComment", topicid); //kører JS funktionen togglebuttons
 
         comments = await apiService.GetComments(id);
 
