@@ -42,12 +42,12 @@
 </div>
 
 <div class="input-group mb-3">
-    <input @bind="date" type="date" class="form-control" placeholder="Hvad har du på hjertet?" aria-label="Username" aria-describedby="basic-addon1">
+    <input @bind="date" type="datetime" class="form-control" placeholder="Hvad har du på hjertet?" aria-label="Username" aria-describedby="basic-addon1">
 </div>
 
 <div class="input-group mb-3">
     <input @bind="user" type="text" class="form-control" placeholder="Brugernavn" aria-label="Username" aria-describedby="basic-addon1">
-    <button @onclick="()=>CreateTopic(title,description,user,date)" type="button" class="btn btn-danger mb-2">Post</button>
+    <button @onclick="()=>CreateTopic(title,description,user, date, votes)" type="button" class="btn btn-danger mb-2">Post</button>
 
 </div>
 
@@ -58,14 +58,15 @@
     string description = "";
     string user = "";
     DateTime date = DateTime.Now;
+    int votes = 0;
 
-    private async void CreateTopic(string title, string description, string user, DateTime date)
+    private async void CreateTopic(string title, string description, string user, DateTime date, int votes)
     {
-        newTopic = await apiService.CreateTopic(title, description, user, date);
+        newTopic = await apiService.CreateTopic(title, description, user, date, votes);
         title = "";
         description = "";
         user = "";
-        date = DateTime.Now;
+        votes = 0;
         Console.WriteLine("Det virker");
         StateHasChanged();
 
