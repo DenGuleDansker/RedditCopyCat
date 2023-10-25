@@ -1,40 +1,66 @@
 ﻿@using Model;
+@using backend.Data
+@inject ApiService apiService
+
+
 @page "/create-topic"
 
 <h3>Create a New Topic</h3>
 
-<EditForm Model="@newTopic" OnValidSubmit="CreateTopic">
-    <DataAnnotationsValidator />
-    <div class="form-group">
-        <label for="title">Title</label>
-        <InputText id="title" class="form-control" @bind-Value="newTopic.Title" />
-        <ValidationMessage For="@(() => newTopic.Title)" />
-    </div>
-    <div class="form-group">
-        <label for="description">Description</label>
-        <InputText id="description" class="form-control" @bind-Value="newTopic.Description" />
-        <ValidationMessage For="@(() => newTopic.Description)" />
-    </div>
-    <div class="form-group">
-        <label for="user">User</label>
-        <InputText id="user" class="form-control" @bind-Value="newTopic.User" />
-        <ValidationMessage For="@(() => newTopic.User)" />
-    </div>
-    <div class="form-group">
-        <label for="date">Date</label>
-        <InputDate id="date" class="form-control" @bind-Value="newTopic.Date" />
-        <ValidationMessage For="@(() => newTopic.Date)" />
-    </div>
-    <button type="submit" class="btn btn-primary">Create Topic</button>
-</EditForm>
+@*<EditForm Model="@newTopic" OnValidSubmit="CreateTopic">
+        <DataAnnotationsValidator />
+        <div class="form-group">
+            <label for="title">Title</label>
+            <InputText id="title" class="form-control" @bind-Value="newTopic.Title" />
+            <ValidationMessage For="@(() => newTopic.Title)" />
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <InputText id="description" class="form-control" @bind-Value="newTopic.Description" />
+            <ValidationMessage For="@(() => newTopic.Description)" />
+        </div>
+        <div class="form-group">
+            <label for="user">User</label>
+            <InputText id="user" class="form-control" @bind-Value="newTopic.User" />
+            <ValidationMessage For="@(() => newTopic.User)" />
+        </div>
+        <div class="form-group">
+            <label for="date">Date</label>
+            <InputDate id="date" class="form-control" @bind-Value="newTopic.Date" />
+            <ValidationMessage For="@(() => newTopic.Date)" />
+        </div>
+        <button type="submit" class="btn btn-primary">Create Topic</button>
+    </EditForm>*@
+
+
+<div class="input-group mb-3">
+    <input @bind="title" type="text" class="form-control" placeholder="Skriv en titel" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group mb-3">
+    <input @bind="description" type="text" class="form-control" placeholder="Hvad har du på hjertet?" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group mb-3">
+    <input @bind="user" type="text" class="form-control" placeholder="Brugernavn" aria-label="Username" aria-describedby="basic-addon1">
+    <button @onclick="()=>CreateTopic(title,description,user,date,votes)" type="button" class="btn btn-danger mb-2">Post</button>
+
+</div>
 
 @code {
     private Topic newTopic = new Topic();
 
-    private void CreateTopic()
+    string title = "";
+    string description = "";
+    string user = "";
+    DateTime date = DateTime.Now;
+    int votes = 0;
+
+    private async void CreateTopic(string title, string description, string user, DateTime date, int votes)
     {
-        
-        // Need to figure out how to send input through API to DB ... o_O
-        
+        newTopic = await apiService.CreateTopic(new ApiService.TopicDTO(title, description, user, date, votes));
+
+        StateHasChanged();
+
     }
 }

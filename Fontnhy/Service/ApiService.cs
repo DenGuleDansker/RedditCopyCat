@@ -37,6 +37,26 @@ public class ApiService
         return await http.GetFromJsonAsync<Comment[]>(url);
     }
 
+    public async Task<Topic> CreateTopic(TopicDTO data)
+    {
+        string url = $"{baseAPI}topics";
+
+        // Post JSON to API, save the HttpResponseMessage
+        HttpResponseMessage msg = await http.PostAsJsonAsync(url, new { data });
+
+        // Get the JSON string from the response
+        string json = msg.Content.ReadAsStringAsync().Result;
+
+        // Deserialize the JSON string to a Comment object
+        Topic? newTopic = JsonSerializer.Deserialize<Topic>(json, new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true // Ignore case when matching JSON properties to C# properties 
+        });
+
+        // Return the new comment 
+        return newTopic;
+    }
+
 
     public async Task<Comment> CreateComment(string content, int postId, int userId)
     {
@@ -138,4 +158,7 @@ public class ApiService
         // Return the updated post (vote increased)
         return updateDownComment;
     }
+
+    public record CommentDTO(string description, string user, DateTime date, int votes, long topicid);
+    public record TopicDTO(string title, string description, string user, DateTime date, int votes);
 }

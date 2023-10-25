@@ -28,6 +28,7 @@
 </script>
 
 <h1>Welcome to RedditCopyCat</h1>
+<h3><a href="https://localhost:7048/create-topic">Create Thread</a></h3>
 
 @if (topics == null)
 {
@@ -39,6 +40,7 @@ else
         <tr>
             <th>Title</th>
             <th>Content</th>
+            <th>User</th>
             <th>Votes</th>
             <th>Date</th>
         </tr>
@@ -54,8 +56,8 @@ else
                 {
                     <td>@topic.Description</td>
                 }
-                <td>
-                    @topic.Votes<span style="float: right;">
+                <td>@topic.User</td>
+                <td>@topic.Votes<span style="float: right;">
                         @*span style så knappen rykkes til højre*@
                         <button id="up_@topic.TopicID" @onclick="() => UpvoteTopic((int)topic.TopicID)">Upvote</button>
                         <button id="dwn_@topic.TopicID" @onclick="() => DownvoteTopic((int)topic.TopicID)">Downvote</button>

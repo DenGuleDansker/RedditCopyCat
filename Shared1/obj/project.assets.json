@@ -961,26 +961,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kaspe\\.nuget\\packages\\": {}
+    "/Users/chilinhm/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kaspe\\Desktop\\reddit\\RedditCopyCat\\Shared1\\Shared.csproj",
+      "projectUniqueName": "/Users/chilinhm/Desktop/RedditCopyCat/Shared1/Shared.csproj",
       "projectName": "Shared",
-      "projectPath": "C:\\Users\\kaspe\\Desktop\\reddit\\RedditCopyCat\\Shared1\\Shared.csproj",
-      "packagesPath": "C:\\Users\\kaspe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kaspe\\Desktop\\reddit\\RedditCopyCat\\Shared1\\obj\\",
+      "projectPath": "/Users/chilinhm/Desktop/RedditCopyCat/Shared1/Shared.csproj",
+      "packagesPath": "/Users/chilinhm/.nuget/packages/",
+      "outputPath": "/Users/chilinhm/Desktop/RedditCopyCat/Shared1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kaspe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/chilinhm/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1030,7 +1029,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.400/RuntimeIdentifierGraph.json"
       }
     }
   }
