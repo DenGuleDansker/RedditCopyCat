@@ -42,7 +42,7 @@
 </div>
 
 <div class="input-group mb-3">
-    <input @bind="date" type="text" class="form-control" placeholder="Hvad har du på hjertet?" aria-label="Username" aria-describedby="basic-addon1">
+    <input @bind="date" type="date" class="form-control" placeholder="Hvad har du på hjertet?" aria-label="Username" aria-describedby="basic-addon1">
 </div>
 
 <div class="input-group mb-3">
@@ -62,7 +62,10 @@
     private async void CreateTopic(string title, string description, string user, DateTime date)
     {
         newTopic = await apiService.CreateTopic(title, description, user, date);
-
+        title = "";
+        description = "";
+        user = "";
+        date = DateTime.Now;
         Console.WriteLine("Det virker");
         StateHasChanged();
 
