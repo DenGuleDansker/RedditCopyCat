@@ -27,7 +27,6 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Components.Analyzers/7.0.12": {},
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/6.0.2": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "7.0.12"
@@ -486,7 +485,6 @@
       },
       "Shared/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Components.Analyzers": "7.0.12",
           "Microsoft.EntityFrameworkCore": "7.0.12",
           "Microsoft.EntityFrameworkCore.Analyzers": "7.0.12"
         },
@@ -508,13 +506,6 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
-    },
-    "Microsoft.AspNetCore.Components.Analyzers/7.0.12": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-4KrR8km+lOTRUsNVe4pumHUNvJK7UQUzVSqhTYXTz/wwU+eQ9TJ7QZn8xcrcbFCz6PzoG5esviCRC31mHAWBSQ==",
-      "path": "microsoft.aspnetcore.components.analyzers/7.0.12",
-      "hashPath": "microsoft.aspnetcore.components.analyzers.7.0.12.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/6.0.2": {
       "type": "package",

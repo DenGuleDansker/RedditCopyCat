@@ -1,5 +1,4 @@
 ﻿<Properties StartupConfiguration="Multiple Projects">
-  <MonoDevelop.Ide.ItemProperties.Frontend PreferredExecutionTarget="/Applications/Opera.app" />
   <MultiItemStartupConfigurations>
     <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
       <Items>
@@ -8,43 +7,45 @@
       </Items>
     </MultiItemSolutionRunConfiguration>
   </MultiItemStartupConfigurations>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/chilinhm/Desktop/RedditCopyCat/Backend/Service/Dataservice.cs" relfile="Service/Dataservice.cs" line="79" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Fontnhy PreferredExecutionTarget="/Applications/Opera.app" />
-  <MonoDevelop.Ide.ItemProperties.Backend PreferredExecutionTarget="/Applications/Opera.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Fontnhy/Pages/NewTopic.razor">
     <Files>
       <File FileName="appsettings.json" />
       <File FileName="../Fontnhy/Pages/Index.razor" />
       <File FileName="../Fontnhy/Pages/Index.razor.css" />
       <File FileName="../Fontnhy/Service/ApiService.cs" />
       <File FileName="../Fontnhy/Pages/CommentPage.razor" />
-      <File FileName="Service/Dataservice.cs" Line="66" Column="33" />
-      <File FileName="Program.cs" Line="134" Column="1" />
+      <File FileName="Service/Dataservice.cs" />
+      <File FileName="Program.cs" Line="123" Column="4" />
       <File FileName="../Shared1/Model/Comment.cs" />
       <File FileName="../Shared1/Model/Topic.cs" />
       <File FileName="../Fontnhy/Pages/Counter.razor" />
       <File FileName="../Fontnhy/Program.cs" />
       <File FileName="../../../../../usr/local/share/dotnet/sdk/7.0.400/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets" />
-      <File FileName="../Fontnhy/Pages/NewTopic.razor" />
+      <File FileName="../Fontnhy/Pages/NewTopic.razor" Line="17" Column="11" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Backend" expanded="True">
-            <Node name="Backend">
+          <Node name="Backend">
+            <Node name="Frontend">
+              <Node name="Pages" expanded="True">
+                <Node name="NewTopic.razor" selected="True" />
+              </Node>
               <Node name="Service" expanded="True" />
-              <Node name="Program.cs" selected="True" />
             </Node>
-            <Node name="Shared" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Frontend PreferredExecutionTarget="/Applications/Opera.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Backend PreferredExecutionTarget="/Applications/Opera.app" />
+  <MonoDevelop.Ide.ItemProperties.Fontnhy PreferredExecutionTarget="/Applications/Opera.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/chilinhm/Desktop/RedditCopyCat/Backend/Service/Dataservice.cs" relfile="Service/Dataservice.cs" line="79" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
