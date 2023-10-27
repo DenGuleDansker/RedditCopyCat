@@ -6760,3 +6760,12 @@ C:\Users\Bruger\Desktop\reddit\RedditCopyCat\Fontnhy\obj\Debug\net6.0\Frontend.d
 C:\Users\Bruger\Desktop\reddit\RedditCopyCat\Fontnhy\obj\Debug\net6.0\refint\Frontend.dll
 C:\Users\Bruger\Desktop\reddit\RedditCopyCat\Fontnhy\obj\Debug\net6.0\Frontend.pdb
 C:\Users\Bruger\Desktop\reddit\RedditCopyCat\Fontnhy\obj\Debug\net6.0\ref\Frontend.dll
+C:\Users\kaspe\Desktop\reddit\RedditCopyCat\Fontnhy\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\kaspe\Desktop\reddit\RedditCopyCat\Fontnhy\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Net.Http.Headers.dll
+C:\Users\kaspe\Desktop\reddit\RedditCopyCat\Fontnhy\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.dll.gz
+C:\Users\kaspe\Desktop\reddit\RedditCopyCat\Fontnhy\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Net.Http.Headers.dll.gz
+C:\Users\kaspe\Desktop\reddit\RedditCopyCat\Fontnhy\bin\Debug\net6.0\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\kaspe\Desktop\reddit\RedditCopyCat\Fontnhy\bin\Debug\net6.0\Microsoft.Net.Http.Headers.dll
+C:\Users\kaspe\Desktop\reddit\RedditCopyCat\Fontnhy\obj\Debug\net6.0\build-gz\o24gP1SQ.gz
+C:\Users\kaspe\Desktop\reddit\RedditCopyCat\Fontnhy\obj\Debug\net6.0\build-gz\S1fnN0+E.gz
+C:\Users\kaspe\Desktop\reddit\RedditCopyCat\Fontnhy\obj\Debug\net6.0\scopedcss\Pages\Thread.razor.rz.scp.css

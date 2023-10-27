@@ -16,6 +16,12 @@
 # Mono auto generated files
 mono_crash.*
 
+# Rules added by KFN
+Backend/Bin/Debug/
+Backend/Bin/Debug/net6.0
+Fontnhy/Bin
+Shared1/Bin
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/

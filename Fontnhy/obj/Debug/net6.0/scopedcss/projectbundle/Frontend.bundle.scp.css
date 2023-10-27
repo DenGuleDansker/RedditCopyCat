@@ -72,6 +72,63 @@ th[b-gif5wibab3] {
     .btn-danger:hover[b-q7mqijk0zu] {
         background-color: #c82333;
     }
+/* /Pages/Thread.razor.rz.scp.css */
+body[b-yconw7q7x7] {
+}
+
+h2[b-yconw7q7x7] {
+    margin-bottom: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.maincontainer[b-yconw7q7x7], .commentcontainer[b-yconw7q7x7] {
+    background-color: lightgray;
+    max-width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+
+.dividertitle[b-yconw7q7x7] {
+    max-width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.metapost[b-yconw7q7x7] {
+    display: flex;
+    justify-content: space-between;
+}
+
+.metapost p[b-yconw7q7x7] {
+    margin-bottom: 2px;
+    font-size: 10px;
+    font-style: italic;
+}
+
+.addvote[b-yconw7q7x7], .comment-votes[b-yconw7q7x7] {
+    display: flex;
+    justify-content: right;
+    padding-bottom: 10px;
+}
+
+.addvote button[b-yconw7q7x7], .comment-votes button[b-yconw7q7x7]{
+    min-width: 90px;
+}
+
+.lftbtn[b-yconw7q7x7] {
+    margin-left: 5px;
+}
+
+.metapost[b-yconw7q7x7] {
+    border-bottom: solid;
+    border-color: white;
+    border-width: 5px;
+}
+
+.commentcontent[b-yconw7q7x7] {
+    padding-top: 16px;
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-gknvvqa2uj] {
     position: relative;

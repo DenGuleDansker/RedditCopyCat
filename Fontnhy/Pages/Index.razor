@@ -67,7 +67,8 @@ else
                     </span>
                 </td>
                 <td>@topic.Date</td>
-                <td><button @onclick="() => TopicClicked((int)topic.TopicID)">Load Comments</button></td>
+                <!-- <td><button onclick="() => TopicClicked((int)topic.TopicID)">Load Comments</button></td> -->
+                <td><button onclick="location.href='thread?id=@topic.TopicID'">Open Topic</button></td>
             </tr>
         }
     </table>
