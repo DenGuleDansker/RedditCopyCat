@@ -28,7 +28,6 @@
 </script>
 
 <h1>Welcome to RedditCopyCat</h1>
-<h3><a href="https://localhost:7048/create-topic">Create Thread</a></h3>
 
 @if (topics == null)
 {
@@ -72,31 +71,6 @@ else
             </tr>
         }
     </table>
-    <br />
-
-    @if (comments != null)
-    {
-        <div class="comment-section">
-            @foreach (var comment in comments)
-            {
-                <div class="comment">
-                    <div class="comment-votes">
-                        <span>
-                            @comment.Votes
-                            <button id="cup_@comment.CommentID" @onclick="() => UpvoteComment((int)clickedTopicTitle, (int)comment.CommentID)">Upvote</button>
-                            <button id="cdwn_@comment.CommentID" @onclick="() => DownvoteComment((int)clickedTopicTitle, (int)comment.CommentID)">Downvote</button>
-                        </span>
-                    </div>
-                    <div class="comment-content">
-                        <p>@comment.Description</p>
-                        <p class="comment-user"><a href="">@comment.User</a></p>
-                        <p class="comment-date">@comment.Date</p>
-                    </div>
-
-                </div>
-            }
-        </div>
-    }
 }
 
 @code {
@@ -115,40 +89,6 @@ else
         topics = await apiService.GetTopics();
     }
 
-    private async Task LoadComments(int topicId)
-    {
-        if (comments != null)
-        {
-            // Comments are already loaded, clear them
-            ClearComments();
-        }
-        else
-        {
-            // Comments are not loaded, load them
-            comments = await apiService.GetComments(topicId);
-        }
-        StateHasChanged(); // Request UI update
-    }
-
-
-
-    private async Task ClearComments()
-    {
-        comments = null;
-    }
-
-
-    private async void TopicClicked(int topicId)
-    {
-        var clickedTopic = topics.FirstOrDefault(t => t.TopicID == topicId);
-        if (clickedTopic != null)
-        {
-            clickedTopicTitle = clickedTopic.TopicID;
-            await LoadComments(topicId);
-        }
-    }
-    //Tilføjet clickedTopic for at hente topics af det topic man trykker på, og derefter sætte clickedTopicTitle's værdi
-
     private async void UpvoteTopic(int id)
     {
         var updatedPost = await apiService.UpvoteTopic(id);
@@ -165,28 +105,6 @@ else
         await JSRuntime.InvokeVoidAsync("toggleButtonsTopic", id); //kører JS funktionen togglebuttons
 
         topics = await apiService.GetTopics();
-
-        StateHasChanged();
-    }
-
-    private async void UpvoteComment(int id, int topicid)
-    {
-        var updatedPost = await apiService.UpvoteComment(id, topicid);
-
-        await JSRuntime.InvokeVoidAsync("toggleButtonsComment", topicid); //kører JS funktionen togglebuttons
-
-        comments = await apiService.GetComments(id);
-
-        StateHasChanged();
-    }
-
-    private async void DownvoteComment(int id, int topicid)
-    {
-        var updatedDownPost = await apiService.DownvoteComment(id, topicid);
-
-        await JSRuntime.InvokeVoidAsync("toggleButtonsComment", topicid); //kører JS funktionen togglebuttons
-
-        comments = await apiService.GetComments(id);
 
         StateHasChanged();
     }

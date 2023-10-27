@@ -1,70 +1,36 @@
-﻿@using Model;
+﻿@page "/create-topic"
+@using Model;
 @using backend.Data
+@inject NavigationManager NavigationManager
 @inject ApiService apiService
 
 
-@page "/create-topic"
+<EditForm Model="newTopic" OnValidSubmit="CreateTopic">
+    <div class="input-group mb-3">
+        <InputText @bind-Value="newTopic.Title" class="form-control" placeholder="Skriv en titel" aria-label="Title" aria-describedby="basic-addon1" />
+    </div>
 
-<h3>Create a New Topic</h3>
+    <div class="input-group mb-3">
+        <InputText @bind-Value="newTopic.Description" class="form-control" placeholder="Hvad har du på hjertet?" aria-label="Description" aria-describedby="basic-addon1" />
+    </div>
 
-@*<EditForm Model="@newTopic" OnValidSubmit="CreateTopic">
-        <DataAnnotationsValidator />
-        <div class="form-group">
-            <label for="title">Title</label>
-            <InputText id="title" class="form-control" @bind-Value="newTopic.Title" />
-            <ValidationMessage For="@(() => newTopic.Title)" />
-        </div>
-        <div class="form-group">
-            <label for="description">Description</label>
-            <InputText id="description" class="form-control" @bind-Value="newTopic.Description" />
-            <ValidationMessage For="@(() => newTopic.Description)" />
-        </div>
-        <div class="form-group">
-            <label for="user">User</label>
-            <InputText id="user" class="form-control" @bind-Value="newTopic.User" />
-            <ValidationMessage For="@(() => newTopic.User)" />
-        </div>
-        <div class="form-group">
-            <label for="date">Date</label>
-            <InputDate id="date" class="form-control" @bind-Value="newTopic.Date" />
-            <ValidationMessage For="@(() => newTopic.Date)" />
-        </div>
-        <button type="submit" class="btn btn-primary">Create Topic</button>
-    </EditForm>*@
+    <div class="input-group mb-3">
+        <InputText @bind-Value="newTopic.User" class="form-control" placeholder="Brugernavn" aria-label="User" aria-describedby="basic-addon1" />
+    </div>
 
-
-<div class="input-group mb-3">
-    <input @bind="title" type="text" class="form-control" placeholder="Skriv en titel" aria-label="Username" aria-describedby="basic-addon1">
-</div>
-
-<div class="input-group mb-3">
-    <input @bind="description" type="text" class="form-control" placeholder="Hvad har du på hjertet?" aria-label="Username" aria-describedby="basic-addon1">
-</div>
-
-<div class="input-group mb-3">
-    <input @bind="user" type="text" class="form-control" placeholder="Brugernavn" aria-label="Username" aria-describedby="basic-addon1">
-</div>
-    <button @onclick="()=>CreateTopic(title,description,user, date, votes)" type="button" class="btn btn-success mb-2">Post</button>
+    <button type="submit" class="btn btn-success mb-2">Post</button>
+</EditForm>
 
 @code {
     private Topic newTopic = new Topic();
 
-
-    string title = "";
-    string description = "";
-    string user = "";
-    DateTime date = DateTime.Now;
-    int votes = 0;
-
-    private async void CreateTopic(string title, string description, string user, DateTime date, int votes)
+    private async Task CreateTopic()
     {
-        Topic topic = await apiService.CreateTopic(title, description, user, date, votes);
-        title = "";
-        description = "";
-        user = "";
-        votes = 0;
-        Console.WriteLine("Det virker");
-        topic = new();
-        StateHasChanged();
+        await apiService.CreateTopic(newTopic.Title, newTopic.Description, newTopic.User, DateTime.Now, 0);
+
+        // Clear the form by creating a new empty Topic.
+        newTopic = new Topic();
+
+        NavigationManager.NavigateTo("/");
     }
 }
