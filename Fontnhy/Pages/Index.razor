@@ -48,11 +48,14 @@ else
         {
             <tr>
                 <td>@topic.Title</td>
-                @if (@topic.Description.ToString().Contains("www.") || @topic.Description.ToString().Contains("https:") || @topic.Description.ToString().Contains("http:"))
+                @if (@topic.Description.ToString().Contains("https:") || @topic.Description.ToString().Contains("http:"))
                 {
-                    <td><a href="@topic.Description">@topic.Description</a></td>
+                    <td><a href="@topic.Description" target="_blank">@topic.Description</a></td>
                 }
-                else
+                else if (@topic.Description.ToString().Contains("www."))
+                {
+                    <td><a href="//@topic.Description" target="_blank">@topic.Description</a></td>
+                }else
                 {
                     <td>@topic.Description</td>
                 }
