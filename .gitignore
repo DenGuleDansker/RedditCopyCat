@@ -18,11 +18,13 @@ mono_crash.*
 
 # Rules added by KFN
 Backend/Bin/Debug/**
+Backend/Bin/**
 Backend/.vs/**
 Backend/obj/**
 Fontnhy/bin/**
+Fontnhy/bin/Debug
 Fontnhy/obj/**
-Shared1/Bin/**
+Shared1/bin/**
 
 # Build results
 [Dd]ebug/
