@@ -1,0 +1,111 @@
+@page "/"
+@inherits LayoutComponentBase
+
+@using Model
+@using backend.Data
+@inject ApiService apiService
+
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+@inject IJSRuntime JSRuntime
+
+
+<script>
+    //JavaScript til at disble knapper på en post efter der er up- eller ned votet
+    function toggleButtonsTopic(ID) {
+        const buttonup = document.getElementById('up_' + ID);
+        const buttondwn = document.getElementById('dwn_' + ID);
+        buttonup.disabled = true;
+        buttondwn.disabled = true;
+    }
+
+    function toggleButtonsComment(ID) {
+        const cbuttonup = document.getElementById('cup_' + ID);
+        const cbuttondwn = document.getElementById('cdwn_' + ID);
+        cbuttonup.disabled = true;
+        cbuttondwn.disabled = true;
+    }
+</script>
+
+<h1>Welcome to RedditCopyCat</h1>
+
+@if (topics == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Content</th>
+            <th>User</th>
+            <th>Votes</th>
+            <th>Date</th>
+        </tr>
+        @foreach (var topic in topics.Take(50)) //kun 50 første hits
+        {
+            <tr>
+                <td>@topic.Title</td>
+                @if (@topic.Description.ToString().Contains("https:") || @topic.Description.ToString().Contains("http:"))
+                {
+                    <td><a href="@topic.Description" target="_blank">@topic.Description</a></td>
+                }
+                else if (@topic.Description.ToString().Contains("www."))
+                {
+                    <td><a href="//@topic.Description" target="_blank">@topic.Description</a></td>
+                }else
+                {
+                    <td>@topic.Description</td>
+                }
+                <td>@topic.User</td>
+                <td>@topic.Votes<span style="float: right;">
+                        @*span style så knappen rykkes til højre*@
+                        <button id="up_@topic.TopicID" @onclick="() => UpvoteTopic((int)topic.TopicID)">Upvote</button>
+                        <button id="dwn_@topic.TopicID" @onclick="() => DownvoteTopic((int)topic.TopicID)">Downvote</button>
+                    </span>
+                </td>
+                <td>@topic.Date</td>
+                <!-- <td><button onclick="() => TopicClicked((int)topic.TopicID)">Load Comments</button></td> -->
+                <td><button onclick="location.href='thread?id=@topic.TopicID'">Open Topic</button></td>
+            </tr>
+        }
+    </table>
+}
+
+@code {
+    private Topic[]? topics;
+    //private Post? votePost;
+
+    private Comment[]? comments;
+
+    private long clickedTopicTitle;
+
+    private long clickedcommentid = 0;
+    //gemmer navnet for at vise det under comments
+
+    protected override async Task OnInitializedAsync()
+    {
+        topics = await apiService.GetTopics();
+    }
+
+    private async void UpvoteTopic(int id)
+    {
+        var updatedPost = await apiService.UpvoteTopic(id);
+
+        topics = await apiService.GetTopics();
+        await JSRuntime.InvokeVoidAsync("toggleButtonsTopic", id); //kører JS funktionen togglebuttons
+
+        StateHasChanged();
+    }
+
+    private async void DownvoteTopic(int id)
+    {
+        var updatedDownPost = await apiService.DownvoteTopic(id);
+        await JSRuntime.InvokeVoidAsync("toggleButtonsTopic", id); //kører JS funktionen togglebuttons
+
+        topics = await apiService.GetTopics();
+
+        StateHasChanged();
+    }
+}
