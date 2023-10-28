@@ -21,8 +21,7 @@ mono_crash.*
 Backend/Bin/Debug/
 **/.vs/
 **/obj/
-**/bin/
-
+Frontnhy/Bin/Debug/
 
 
 # Build results
