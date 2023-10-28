@@ -1,0 +1,37 @@
+﻿@page "/create-topic"
+@using Model;
+@using backend.Data
+@inject NavigationManager NavigationManager
+@inject ApiService apiService
+
+<h2>Opret ny thread</h2>
+
+<EditForm Model="newTopic" OnValidSubmit="CreateTopic">
+    <div class="input-group mb-3">
+        <InputText @bind-Value="newTopic.Title" class="form-control" placeholder="Skriv en titel" aria-label="Title" aria-describedby="basic-addon1" />
+    </div>
+
+    <div class="input-group mb-3">
+        <InputText @bind-Value="newTopic.Description" class="form-control" placeholder="Hvad har du på hjertet?" aria-label="Description" aria-describedby="basic-addon1" />
+    </div>
+
+    <div class="input-group mb-3">
+        <InputText @bind-Value="newTopic.User" class="form-control" placeholder="Brugernavn" aria-label="User" aria-describedby="basic-addon1" />
+    </div>
+
+    <button type="submit" class="btn btn-success mb-2">Post</button>
+</EditForm>
+
+@code {
+    private Topic newTopic = new Topic();
+
+    private async Task CreateTopic()
+    {
+        await apiService.CreateTopic(newTopic.Title, newTopic.Description, newTopic.User, DateTime.Now, 0);
+
+        // Clear the form by creating a new empty Topic.
+        newTopic = new Topic();
+
+        NavigationManager.NavigateTo("/");
+    }
+}

@@ -1,0 +1,53 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = Frontend
+build_property.RootNamespace = Frontend
+build_property.ProjectDir = C:\Users\kaspe\Desktop\reddit\RedditCopyCat\Fontnhy\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\kaspe\Desktop\reddit\RedditCopyCat\Fontnhy
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/kaspe/Desktop/reddit/RedditCopyCat/Fontnhy/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kaspe/Desktop/reddit/RedditCopyCat/Fontnhy/Shared/CreateComment.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENyZWF0ZUNvbW1lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kaspe/Desktop/reddit/RedditCopyCat/Fontnhy/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kaspe/Desktop/reddit/RedditCopyCat/Fontnhy/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kaspe/Desktop/reddit/RedditCopyCat/Fontnhy/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-gif5wibab3
+
+[C:/Users/kaspe/Desktop/reddit/RedditCopyCat/Fontnhy/Pages/NewTopic.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3VG9waWMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-q7mqijk0zu
+
+[C:/Users/kaspe/Desktop/reddit/RedditCopyCat/Fontnhy/Pages/Thread.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGhyZWFkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-yconw7q7x7
+
+[C:/Users/kaspe/Desktop/reddit/RedditCopyCat/Fontnhy/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-gknvvqa2uj
+
+[C:/Users/kaspe/Desktop/reddit/RedditCopyCat/Fontnhy/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-9ljbyqraro
