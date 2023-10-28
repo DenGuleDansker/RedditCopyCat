@@ -18,14 +18,12 @@
 mono_crash.*
 
 # Rules added by KFN
-Backend/Bin/Debug/**
-Backend/Bin/**
-Backend/.vs/**
-Backend/obj/**
-Fontnhy/bin/**
-Fontnhy/bin/Debug
-Fontnhy/obj/**
-Shared1/bin/**
+**/Backend/Bin/Debug/
+**/.vs/
+**/obj/
+**/bin/
+
+
 
 # Build results
 [Dd]ebug/
@@ -372,3 +370,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+Backend/.vs/Backend/FileContentIndex/6b26cb9f-32d0-4cc0-8b9b-71a04e6e45db.vsidx
