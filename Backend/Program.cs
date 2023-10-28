@@ -23,17 +23,17 @@ builder.Services.AddDbContext<TopicContext>(options =>
 // Tilføj DataService så den kan bruges i endpoints
 builder.Services.AddScoped<DataService>();
 
-// Dette kode kan bruges til at fjerne "cykler" i JSON objekterne.
-/*
+//Dette kode kan bruges til at fjerne "cykler" i JSON objekterne.
+
 builder.Services.Configure<JsonOptions>(options =>
 {
-    // Her kan man fjerne fejl der opstår, når man returnerer JSON med objekter,
-    // der refererer til hinanden i en cykel.
-    // (altså dobbelrettede associeringer)
-    options.SerializerOptions.ReferenceHandler = 
+     //Her kan man fjerne fejl der opstår, når man returnerer JSON med objekter,
+     //der refererer til hinanden i en cykel.
+     //(altså dobbelrettede associeringer)
+    options.SerializerOptions.ReferenceHandler =
         System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
 });
-*/
+
 
 var app = builder.Build();
 
@@ -67,20 +67,71 @@ app.MapGet("/api/topics", (DataService service) =>
     return service.GetTopics();
 });
 
-app.MapGet("/api/topics/{id}", (DataService service, int id) =>
+app.MapGet("/api/topic/{id}", (DataService service, int id) =>
 {
     return service.GetTopic(id);
 });
 
-app.MapPost("/api/topics", (DataService service) =>
-{
-    return service.CreateTopic();
-});
-
-////COMMENTS
-//app.MapGet("/api/topics/{id}/comments", (DataService service, int id) =>
+//app.MapPost("/api/topics", (DataService service, Topic topicdata) =>
 //{
-//    return service.GetComments(id);
+//    return service.CreateTopic(topicdata);
 //});
 
+app.MapPost("/api/topics", (DataService service, TopicDTO data) =>
+{
+    return service.CreateTopic(data.title, data.description, data.user, data.date, data.votes);
+});
+
+//COMMENTS
+app.MapGet("/api/{topicid}/comments", (DataService service, int topicid) =>
+{
+    return service.GetComments(topicid);
+});
+
+app.MapGet("/api/topics/{topicid}/comments/{commentid}", (DataService service, int topicid, int commentid) =>
+{
+    return service.GetComment(commentid);
+});
+
+app.MapPost("/api/comment", (DataService service, CommentDTO data) =>
+{
+    return service.CreateComment(data.description, data.user, data.topicid);
+});
+
+app.MapPut("/api/topic/{topicid}/upvote", (DataService service, int topicid) =>
+{
+    Console.WriteLine($"Received PUT request for topicid: {topicid}");
+    var result = service.UpvoteTopic(topicid);
+    Console.WriteLine($"Upvote result: {result}");
+    return result;
+});
+
+app.MapPut("/api/topic/{topicid}/downvote", (DataService service, int topicid) =>
+{
+    Console.WriteLine($"Received PUT request for topicid: {topicid}");
+    var result = service.DownvoteTopic(topicid);
+    Console.WriteLine($"Downvote result: {result}");
+    return result;
+});
+
+app.MapPut("/api/topic/{topicid}/comment/{commentid}/upvote", (DataService service, int commentid, int topicid) =>
+{
+    Console.WriteLine($"Received PUT request for commentid: {commentid}");
+    var result = service.UpvoteComment(commentid, topicid);
+    Console.WriteLine($"Upvote result: {result}");
+    return result;
+});
+
+app.MapPut("/api/topic/{topicid}/comment/{commentid}/downvote", (DataService service, int commentid, int topicid) =>
+{
+    Console.WriteLine($"Received PUT request for commentid: {commentid}");
+    var result = service.DownvoteComment(commentid, topicid);
+    Console.WriteLine($"Downvote result: {result}");
+    return result;
+});
+
+
 app.Run();
+
+record CommentDTO(string description, string user, int votes, int topicid);
+record TopicDTO(string title, string description, string user, DateTime date, int votes);

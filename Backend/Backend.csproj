@@ -14,15 +14,19 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SQLite" Version="7.0.12" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" Version="7.0.12" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Model\" />
     <Folder Include="Service\" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Model\" />
     <None Remove="Service\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shared1\Shared.csproj" />
   </ItemGroup>
 </Project>

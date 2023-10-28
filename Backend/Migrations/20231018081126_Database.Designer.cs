@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Model;
 
@@ -10,9 +11,11 @@ using Model;
 namespace Backend.Migrations
 {
     [DbContext(typeof(TopicContext))]
-    partial class TopicContextModelSnapshot : ModelSnapshot
+    [Migration("20231018081126_Database")]
+    partial class Database
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.12");
@@ -30,11 +33,7 @@ namespace Backend.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-<<<<<<< HEAD
-                    b.Property<long?>("TopicID")
-=======
                     b.Property<long>("TopicID")
->>>>>>> GG
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("User")
@@ -61,10 +60,7 @@ namespace Backend.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
-<<<<<<< HEAD
-=======
                         .IsRequired()
->>>>>>> GG
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Title")
@@ -85,11 +81,6 @@ namespace Backend.Migrations
 
             modelBuilder.Entity("Model.Comment", b =>
                 {
-<<<<<<< HEAD
-                    b.HasOne("Model.Topic", null)
-                        .WithMany("Comment")
-                        .HasForeignKey("TopicID");
-=======
                     b.HasOne("Model.Topic", "Topic")
                         .WithMany("Comment")
                         .HasForeignKey("TopicID")
@@ -97,7 +88,6 @@ namespace Backend.Migrations
                         .IsRequired();
 
                     b.Navigation("Topic");
->>>>>>> GG
                 });
 
             modelBuilder.Entity("Model.Topic", b =>
