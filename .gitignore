@@ -18,7 +18,7 @@
 mono_crash.*
 
 # Rules added by KFN
-**/Backend/Bin/Debug/
+Backend/Bin/Debug/
 **/.vs/
 **/obj/
 **/bin/
