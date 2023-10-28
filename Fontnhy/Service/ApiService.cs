@@ -58,18 +58,20 @@ public class ApiService
     }
 
 
-    public async Task<Comment> CreateComment(string content, int postId, int userId)
+    public async Task<Comment> CreateComment(string description, int topicid, string user)
     {
-        string url = $"{baseAPI}posts/{postId}/comments";
+        string url = $"{baseAPI}comment";
 
         // Post JSON to API, save the HttpResponseMessage
-        HttpResponseMessage msg = await http.PostAsJsonAsync(url, new { content, userId });
+        HttpResponseMessage msg = await http.PostAsJsonAsync(url, new { description, user, topicid});
 
         // Get the JSON string from the response
-        string json = msg.Content.ReadAsStringAsync().Result;
+        string cmtjson = msg.Content.ReadAsStringAsync().Result;
+
+        Console.WriteLine(cmtjson);
 
         // Deserialize the JSON string to a Comment object
-        Comment? newComment = JsonSerializer.Deserialize<Comment>(json, new JsonSerializerOptions
+        Comment? newComment = JsonSerializer.Deserialize<Comment>(cmtjson, new JsonSerializerOptions
         {
             PropertyNameCaseInsensitive = true // Ignore case when matching JSON properties to C# properties 
         });

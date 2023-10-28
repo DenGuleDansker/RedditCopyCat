@@ -129,6 +129,12 @@ h2[b-yconw7q7x7] {
 .commentcontent[b-yconw7q7x7] {
     padding-top: 16px;
 }
+
+.center[b-yconw7q7x7] {
+    max-width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-gknvvqa2uj] {
     position: relative;

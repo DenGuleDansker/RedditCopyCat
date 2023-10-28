@@ -54,3 +54,9 @@ h2 {
 .commentcontent {
     padding-top: 16px;
 }
+
+.center {
+    max-width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+}

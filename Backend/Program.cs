@@ -95,7 +95,7 @@ app.MapGet("/api/topics/{topicid}/comments/{commentid}", (DataService service, i
 
 app.MapPost("/api/comment", (DataService service, CommentDTO data) =>
 {
-    return service.CreateComment(data.description, data.user, data.date, data.votes, data.topicid);
+    return service.CreateComment(data.description, data.user, data.topicid);
 });
 
 app.MapPut("/api/topic/{topicid}/upvote", (DataService service, int topicid) =>
@@ -133,5 +133,5 @@ app.MapPut("/api/topic/{topicid}/comment/{commentid}/downvote", (DataService ser
 
 app.Run();
 
-record CommentDTO(string description, string user, DateTime date, int votes, long topicid);
+record CommentDTO(string description, string user, int votes, int topicid);
 record TopicDTO(string title, string description, string user, DateTime date, int votes);

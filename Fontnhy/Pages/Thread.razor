@@ -5,7 +5,7 @@
 @using Microsoft.AspNetCore.WebUtilities
 @inject IJSRuntime JSRuntime
 @inject ApiService apiService
-
+@inject NavigationManager NavigationManager
 @inject NavigationManager Navigation
 
 <script>
@@ -98,11 +98,28 @@
     }
 
 </div>
+<div class="center">
+    <h4>Tilføj kommentar til denne tråd</h4>
+    <EditForm Model="newComment" OnValidSubmit="CreateComment">
+
+        <div class="input-group mb-3">
+            <InputText @bind-Value="newComment.Description" class="form-control" placeholder="Hvad har du på hjertet?" aria-label="Description" aria-describedby="basic-addon1" />
+        </div>
+
+        <div class="input-group mb-3">
+            <InputText @bind-Value="newComment.User" class="form-control" placeholder="Brugernavn" aria-label="User" aria-describedby="basic-addon1" />
+        </div>
+
+        <button type="submit" class="btn btn-success mb-2">Post</button>
+    </EditForm>
+</div>
 
 @code {
 
     int threadID;
+
     private Topic? topic;
+    private Comment? newComment = new Comment();
 
     private Comment[]? comments;
 
@@ -166,5 +183,15 @@
         comments = await apiService.GetComments(id);
 
         StateHasChanged();
+    }
+
+    private async Task CreateComment()
+    {
+        await apiService.CreateComment(newComment.Description, threadID, newComment.User);
+
+        // Clear the form by creating a new empty Topic.
+        newComment = new Comment();
+
+        comments = await apiService.GetComments(threadID);
     }
 }

@@ -17,20 +17,7 @@ public class DataService
     /// <summary>
     /// Seeder noget nyt data i databasen hvis det er nødvendigt.
     /// </summary>
-    //public void SeedData()
-    //{
 
-    //    Topic topic = db.Topics.FirstOrDefault()!;
-    //    if (topic == null)
-    //    {
-    //        topic = new Topic { Title = "Hej" };
-    //        db.Topics.Add(topic);
-
-    //    }
-
-
-    //    db.SaveChanges();
-    //}
 
 
     // Topics
@@ -60,14 +47,6 @@ public class DataService
         return topic;
     }
 
-    //public string CreateTopic(string title, string description, string user, DateTime date, int votes)
-    //{
-    //
-    //db.Topics.Add(new Topic { Title = title, Description = description, User = user, Date = date, Votes = votes });
-    //db.SaveChanges();
-    //    return "Topic created";
-    //}
-
     // Comments
 
     public List<Comment> GetComments(int topicId)
@@ -81,14 +60,24 @@ public class DataService
     }
 
 
-    public string CreateComment(string description, string user, DateTime date, int votes, long topicid)
+    public Comment CreateComment(string description, string user, int topicid)
     //public Comment CreateComment(string description, string user)
     {
 
         //Comment newcomment = new Comment(description, user);
 
         Topic topic1 = db.Topics.FirstOrDefault(a => a.TopicID == topicid);
-        db.Comment.Add(new Comment { Description = description, User = user, Date = date, Votes = votes, Topic = topic1 });
+
+        Comment comment = new Comment
+        {
+            Description = description,
+            User = user,
+            Date = DateTime.Now,
+            Votes = 0,
+            Topic = topic1
+        };
+
+        db.Comment.Add(comment);
 
         try
         {
@@ -104,7 +93,7 @@ public class DataService
                 innerException = innerException.InnerException;
             }
         }
-        return "Comment created";
+        return comment;
 
     }
 
