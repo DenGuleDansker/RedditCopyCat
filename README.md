@@ -1,3 +1,3 @@
 # RedditCopyCat
 
-#Lavet af Chi linh, Kasper, Marcus og Jakob Magni
+#Lavet af Chi linh, Kasper Florczak, Marcus Bertelsen og Jakob Magni
