@@ -18,7 +18,7 @@ builder.Services.AddCors(options =>
 
 // Tilføj DbContext factory som service.
 builder.Services.AddDbContext<TopicContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("ContextSQLite")));
+    options.UseSqlite(builder.Configuration.GetConnectionString("MySqlConnection")));
 
 // Tilføj DataService så den kan bruges i endpoints
 builder.Services.AddScoped<DataService>();
