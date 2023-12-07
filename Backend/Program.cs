@@ -1,7 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http.Json;
+using MySql.EntityFrameworkCore.Extensions;
 using Model;
 using Service;
+using System;
+using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,11 +20,14 @@ builder.Services.AddCors(options =>
 });
 
 // Tilføj DbContext factory som service.
-builder.Services.AddDbContext<TopicContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("MySqlConnection")));
+var connectionString = builder.Configuration.GetConnectionString("MySqlConnection");
+builder.Services.AddDbContext<TopicContext>(options => {
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+});
 
 // Tilføj DataService så den kan bruges i endpoints
 builder.Services.AddScoped<DataService>();
+
 
 //Dette kode kan bruges til at fjerne "cykler" i JSON objekterne.
 
@@ -71,11 +77,6 @@ app.MapGet("/api/topic/{id}", (DataService service, int id) =>
 {
     return service.GetTopic(id);
 });
-
-//app.MapPost("/api/topics", (DataService service, Topic topicdata) =>
-//{
-//    return service.CreateTopic(topicdata);
-//});
 
 app.MapPost("/api/topics", (DataService service, TopicDTO data) =>
 {

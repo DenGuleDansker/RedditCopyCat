@@ -9,10 +9,11 @@ namespace Model
     {
         public DbSet<Topic> Topics { get; set; } // Assuming 'Topic' is your entity type
         public DbSet<Comment> Comment { get; set; } // Assuming 'Topic' is your entity type
+        public string DbPath { get; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public TopicContext(DbContextOptions<TopicContext> options) : base(options)
         {
-            optionsBuilder.UseMySQL("Server=mysql25.unoeuro.com;Database=chilinh_dk_db;User=chilinh_dk;Password=f4kr6dabEHnxgGpzRAec;");
+            DbPath = "Server=mysql25.unoeuro.com;Database=chilinh_dk_db;User=chilinh_dk;Password=f4kr6dabEHnxgGpzRAec;";
         }
     }
 }
