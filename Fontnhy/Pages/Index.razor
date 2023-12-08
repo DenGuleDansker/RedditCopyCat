@@ -7,9 +7,9 @@
 
 @using Microsoft.Extensions.Configuration
 @inject IConfiguration Configuration
-@inject IJSRuntime JSRuntime
-
-
+@* @inject IJSRuntime JSRuntime
+ *@
+@* 
 <script>
     //JavaScript til at disble knapper på en post efter der er up- eller ned votet
     function toggleButtonsTopic(ID) {
@@ -25,7 +25,7 @@
         cbuttonup.disabled = true;
         cbuttondwn.disabled = true;
     }
-</script>
+</script> *@
 
 <h1>Welcome to RedditCopyCat</h1>
 
@@ -94,7 +94,7 @@ else
         var updatedPost = await apiService.UpvoteTopic(id);
 
         topics = await apiService.GetTopics();
-        await JSRuntime.InvokeVoidAsync("toggleButtonsTopic", id); //kører JS funktionen togglebuttons
+        // await JSRuntime.InvokeVoidAsync("toggleButtonsTopic", id); //kører JS funktionen togglebuttons
 
         StateHasChanged();
     }
@@ -102,7 +102,7 @@ else
     private async void DownvoteTopic(int id)
     {
         var updatedDownPost = await apiService.DownvoteTopic(id);
-        await JSRuntime.InvokeVoidAsync("toggleButtonsTopic", id); //kører JS funktionen togglebuttons
+        // await JSRuntime.InvokeVoidAsync("toggleButtonsTopic", id); //kører JS funktionen togglebuttons
 
         topics = await apiService.GetTopics();
 

@@ -3,12 +3,12 @@
 @using backend.Data
 @using Model
 @using Microsoft.AspNetCore.WebUtilities
-@inject IJSRuntime JSRuntime
+@* @inject IJSRuntime JSRuntime*@
 @inject ApiService apiService
 @inject NavigationManager NavigationManager
 @inject NavigationManager Navigation
 
-<script>
+@* <script>
     //JavaScript til at disble knapper på en post/comment efter der er up- eller ned votet
     function toggleButtonsTopic(ID) {
         const buttonup = document.getElementById('up_' + ID);
@@ -23,7 +23,7 @@
         cbuttonup.disabled = true;
         cbuttondwn.disabled = true;
     }
-</script>
+</script> *@
 
 <div class="maincontainer">
     <div class="content">
@@ -148,7 +148,7 @@
         var updatedPost = await apiService.UpvoteTopic(id);
 
         topic = await apiService.GetTopic(id);
-        await JSRuntime.InvokeVoidAsync("toggleButtonsTopic", id); //kører JS funktionen togglebuttons
+        // await JSRuntime.InvokeVoidAsync("toggleButtonsTopic", id); //kører JS funktionen togglebuttons
 
         StateHasChanged();
     }
@@ -156,7 +156,7 @@
     private async void DownvoteTopic(int id)
     {
         var updatedDownPost = await apiService.DownvoteTopic(id);
-        await JSRuntime.InvokeVoidAsync("toggleButtonsTopic", id); //kører JS funktionen togglebuttons
+        // await JSRuntime.InvokeVoidAsync("toggleButtonsTopic", id); //kører JS funktionen togglebuttons
 
         topic = await apiService.GetTopic(id);
 
@@ -167,7 +167,7 @@
     {
         var updatedPost = await apiService.UpvoteComment(id, topicid);
 
-        await JSRuntime.InvokeVoidAsync("toggleButtonsComment", topicid); //kører JS funktionen togglebuttons
+        // await JSRuntime.InvokeVoidAsync("toggleButtonsComment", topicid); //kører JS funktionen togglebuttons
 
         comments = await apiService.GetComments(id);
 
@@ -178,7 +178,7 @@
     {
         var updatedDownPost = await apiService.DownvoteComment(id, topicid);
 
-        await JSRuntime.InvokeVoidAsync("toggleButtonsComment", topicid); //kører JS funktionen togglebuttons
+        // await JSRuntime.InvokeVoidAsync("toggleButtonsComment", topicid); //kører JS funktionen togglebuttons
 
         comments = await apiService.GetComments(id);
 
